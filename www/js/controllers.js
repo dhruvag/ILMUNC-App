@@ -47,10 +47,4 @@ $scope.isActive = function(type) {
 
 .controller('SessionCtrl', function($scope, $stateParams, Session) {
     $scope.session = Session.get({sessionId: $stateParams.sessionId});
-})
-
-.controller('ProcedreCtrl', function($scope) {})
-.controller('PositionCtrl', function($scope) {})
-.controller('ResolutionCtrl', function($scope) {})
-.controller('WorkingCtrl', function($scope) {})
-;
+});

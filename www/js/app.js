@@ -48,6 +48,15 @@ angular.module('conference', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.procedure', {
+    url: "/procedure",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/procedure.html"
+      }
+    }
+  })
+
   .state('app.contact', {
     url: "/contact",
     views: {
@@ -66,53 +75,6 @@ angular.module('conference', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.rules', {
-    url: "/rules",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/rules.html"
-      }
-    }
-  })
-
-  .state('app.rules.procedure', {
-    url: '/procedure',
-    views: {
-      'tab-procedure': {
-        templateUrl: 'templates/tab-procedure.html',
-        controller: 'ProcedureCtrl'
-      }
-    }
-  })
-
-  .state('app.rules.position', {
-      url: '/position',
-      views: {
-        'tab-position': {
-          templateUrl: 'templates/tab-position.html',
-          controller: 'PositionCtrl'
-        }
-      }
-    })
-    .state('app.rules.resolution.', {
-      url: '/resolution',
-      views: {
-        'tab-resolution': {
-          templateUrl: 'templates/tab-resolution.html',
-          controller: 'ResolutionCtrl'
-        }
-      }
-    })
-
-  .state('app.rules.working', {
-    url: '/working',
-    views: {
-      'tab-working': {
-        templateUrl: 'templates/tab-working.html',
-        controller: 'WorkingCtrl'
-      }
-    }
-  })
     .state('app.sessions', {
   url: "/sessions",
   views: {
@@ -133,7 +95,7 @@ angular.module('conference', ['ionic', 'starter.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/sessions');
+  $urlRouterProvider.otherwise('/app/schedule');
 })
 
 .controller('confControl', function($scope) {
