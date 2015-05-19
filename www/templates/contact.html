@@ -1,0 +1,27 @@
+<ion-view view-title="Contact Us">
+  <ion-content>
+  <div class="list card" ng-repeat="sec in secs">
+      <div class="item item-body">
+      	<div>
+		<img style = "float: left; padding-right:15px;" src={{sec.image}}>
+      	</div>
+        <div>
+          <b style="font-size: 18px;">{{sec.name}}</b>
+        </div>
+        <div>
+          {{sec.title}}
+        </div>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item">
+                    <i class="icon ion-iphone"></i>
+                    {{sec.phone}}
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-email"></i>
+                    {{sec.email}}
+                </a>
+            </div>
+    </div>
+  </ion-content>
+</ion-view>

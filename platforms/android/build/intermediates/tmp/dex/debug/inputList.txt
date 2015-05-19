@@ -1,0 +1,2 @@
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\classes\debug
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-6f5724a43218541987c5f1786698c18358f2a3d7.jar
