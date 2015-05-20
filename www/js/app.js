@@ -84,6 +84,24 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
     }
   })
 
+  .state('app.feedback', {
+    url: "/feedback",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/feedback.html",
+      }
+    }
+  })
+
+  .state('app.home', {
+    url: "/home",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/home.html",
+      }
+    }
+  })
+
     .state('app.sessions', {
   url: "/sessions",
   views: {
@@ -104,7 +122,7 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/schedule');
+  $urlRouterProvider.otherwise('/app/home');
 })
 
 .controller('confControl', function($scope,  $cordovaBarcodeScanner, $timeout, $cordovaFileTransfer) {

@@ -14,19 +14,53 @@
 }
 
 .center {
-    top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
     position: relative !important;
     margin:0 auto;
     width:50%;
     align-items: center;
-   margin-top: 200px; 
-   margin-left: 75px;
-   margin-right: 75px;
+   margin-top: 170px; 
+}
+
+.center3 {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
+    position: relative !important;
+    margin:0 auto;
+    width:50%;
+    align-items: center;
+}
+
+.center2 {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
+    position: relative !important;
+   margin-left: 65px;
 }
 
 .menu-left .item {
@@ -44,4 +78,8 @@
 
 .background, .background .pane{
     background-color: #D1D1D1;
+}
+
+.home {
+  background: url('../img/splash.jpg') no-repeat fixed center !important;
 }
