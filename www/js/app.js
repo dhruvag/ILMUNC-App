@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('conference', ['ionic', 'starter.controllers'])
+angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -70,7 +70,16 @@ angular.module('conference', ['ionic', 'starter.controllers'])
     url: "/sponsors",
     views: {
       'menuContent': {
-        templateUrl: "templates/sponsors.html"
+        templateUrl: "templates/sponsors.html",
+      }
+    }
+  })
+
+  .state('app.meet', {
+    url: "/meet",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/meet.html",
       }
     }
   })
@@ -98,7 +107,7 @@ angular.module('conference', ['ionic', 'starter.controllers'])
   $urlRouterProvider.otherwise('/app/schedule');
 })
 
-.controller('confControl', function($scope) {
+.controller('confControl', function($scope,  $cordovaBarcodeScanner, $timeout, $cordovaFileTransfer) {
     $scope.active = 'thursday';
     $scope.setActive = function(type) {
         $scope.active = type;
@@ -106,6 +115,14 @@ angular.module('conference', ['ionic', 'starter.controllers'])
 
     $scope.isActive = function(type) {
         return type === $scope.active;
+    };
+
+    $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            alert(imageData.text);
+        }, function(error) {
+            console.log("An error happened -> " + error);
+        });
     };
 
      $scope.groups = [];

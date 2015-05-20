@@ -1,27 +1,30 @@
 <ion-view view-title="Map">
-  <ion-content>
-    <h1>Map</h1>
-    
-  </ion-content>
-  <ion-footer-bar>
-  <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+        <ion-tabs class="tabs-icon-top">
+            <ion-tab title="Around the Hotel" icon-on="ion-ios-world" icon-off="ion-ios-world-outline">
+                <ion-content padding="true">
+                    <h2 style="padding-top: 35px;"> </h2>
+                    <ion-scroll zooming="true" direction="xy" style="width: 400px; height: 400px">
+  <div style="width: 500px; height: 500px; background: url('http://www.starwoodhotels.com/pub/media/1776/SI_1776_flr_ballroom.gif')"></div>
+ </ion-scroll>
+                 </ion-content>
+            </ion-tab>
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="Around the Hotel" icon-off="ion-ios-world-outline" icon-on="ion-ios-world" href="">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
-  </ion-tab>
+            <ion-tab title="Level 1" icon-on="ion-ios-home" icon-off="ion-ios-home-outline">
+                <ion-content has-header="true" padding="true">
+                    <h2 style="padding-top: 35px;"> </h2>
+      <ion-scroll zooming="true" direction="xy" style="width: 400px; height: 400px">
+  <div style="width: 450px; height: 500px; background: url('http://www.starwoodhotels.com/pub/media/1776/S_1776_allflr.gif')"></div>
+ </ion-scroll>
+                </ion-content>
+            </ion-tab>
 
-  <!-- Chats Tab -->
-  <ion-tab title="Level 1" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
-  </ion-tab>
-
-  <!-- Account Tab -->
-  <ion-tab title="Level 2" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="">
-    <ion-nav-view name="tab-account"></ion-nav-view>
-  </ion-tab>
-
-
-</ion-tabs>
-</ion-footer-bar>
-</ion-view>
+            <ion-tab title="Level 2" icon-on="ion-ios-home" icon-off="ion-ios-home-outline">
+                <ion-content has-header="true" padding="true">
+                    <h2 style="padding-top: 35px;"> </h2>
+                    <ion-scroll zooming="true" direction="xy" style="width: 400px; height: 400px">
+  <div style="width: 550px; height: 500px; background: url('http://www.starwoodhotels.com/pub/media/1776/SI_1776_flr_mezzanine.gif')"></div>
+ </ion-scroll>
+                </ion-content>
+            </ion-tab>
+        </ion-tabs>
+    </ion-view>

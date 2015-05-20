@@ -8,5 +8,12 @@
         sha1="cbcd2cf40034c689534fc5f14c75a37233d8c11a">
         <dex dex="C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-6f5724a43218541987c5f1786698c18358f2a3d7.jar" />
     </item>
+    <item
+        jar="C:\Users\Dhruv\conference\platforms\android\libs\com.google.zxing.client.android.captureactivity.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="92d1409f739c4ebcfbab79b2a11ec63d1bf668f5">
+        <dex dex="C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\com.google.zxing.client.android.captureactivity-d2ab9aa1cefc8d014de248e6f6a17cb7d96421de.jar" />
+    </item>
 
 </items>

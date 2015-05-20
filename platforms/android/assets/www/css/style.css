@@ -12,3 +12,36 @@
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
 }
+
+.center {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative !important;
+    margin:0 auto;
+    width:50%;
+    align-items: center;
+   margin-top: 200px; 
+   margin-left: 75px;
+   margin-right: 75px;
+}
+
+.menu-left .item {
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #333;
+    color: #F0F1F1;
+}
+
+.menu-left .item-complex .item-content, .menu-left .item-radio .item-content {
+    background-color: transparent;
+}
+
+.background, .background .pane{
+    background-color: #D1D1D1;
+}

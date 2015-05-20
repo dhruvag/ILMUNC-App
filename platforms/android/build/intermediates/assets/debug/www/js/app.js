@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('conference', ['ionic', 'starter.controllers'])
+angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -48,6 +48,15 @@ angular.module('conference', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.procedure', {
+    url: "/procedure",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/procedure.html"
+      }
+    }
+  })
+
   .state('app.contact', {
     url: "/contact",
     views: {
@@ -61,10 +70,20 @@ angular.module('conference', ['ionic', 'starter.controllers'])
     url: "/sponsors",
     views: {
       'menuContent': {
-        templateUrl: "templates/sponsors.html"
+        templateUrl: "templates/sponsors.html",
       }
     }
   })
+
+  .state('app.meet', {
+    url: "/meet",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/meet.html",
+      }
+    }
+  })
+
     .state('app.sessions', {
   url: "/sessions",
   views: {
@@ -85,10 +104,10 @@ angular.module('conference', ['ionic', 'starter.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/sessions');
+  $urlRouterProvider.otherwise('/app/schedule');
 })
 
-.controller('confControl', function($scope) {
+.controller('confControl', function($scope,  $cordovaBarcodeScanner, $timeout, $cordovaFileTransfer) {
     $scope.active = 'thursday';
     $scope.setActive = function(type) {
         $scope.active = type;
@@ -96,6 +115,14 @@ angular.module('conference', ['ionic', 'starter.controllers'])
 
     $scope.isActive = function(type) {
         return type === $scope.active;
+    };
+
+    $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            alert(imageData.text);
+        }, function(error) {
+            console.log("An error happened -> " + error);
+        });
     };
 
      $scope.groups = [];
@@ -119,7 +146,7 @@ angular.module('conference', ['ionic', 'starter.controllers'])
       name: committees[2],
       items: []
     };
-      $scope.groups[2].items.push('Constellis & Syrian Government, 2020');
+      $scope.groups[2].items.push('Constellis & Syrian Government');
       $scope.groups[2].items.push('Security Council');
       $scope.groups[2].items.push('Reconstructing Russia');
   
@@ -146,12 +173,12 @@ angular.module('conference', ['ionic', 'starter.controllers'])
   ];
 
   $scope.secs = [
-    { name: 'Santosh Vallabhaneni', title: "Secretary-General", phone: 1234567890, email: "sec-gen@ilmunc-india.com" },
-    { name: 'Jyothi Vallurupalli', title: "Director-General", phone: 1234567890, email: "dir-gen@ilmunc-india.com" },
-    { name: 'Ana Rancic', title: "Chief of Staff", phone: 1234567890, email: "staff@ilmunc-india.com" },
-    { name: 'Elise Pi', title: "Chief of Operations", phone: 1234567890, email: "operations@ilmunc-india.com" },
-    { name: 'Dhruv Agarwal', title: "Under Secretary-General Operations", phone: 1234567890, email: "usg-ops@ilmunc-india.com" },
-    { name: 'Hannah White', title: "Under Secretary-General Administration", phone: 1234567890, email: "admin@ilmunc-india.com" },
+    { name: 'Santosh Vallabhaneni', title: "Secretary-General", phone: 1234567890, email: "sec-gen@ilmunc-india.com", image: "img/sunny.jpg" },
+    { name: 'Jyothi Vallurupalli', title: "Director-General", phone: 1234567890, email: "dir-gen@ilmunc-india.com", image: "img/jyothi.jpg" },
+    { name: 'Ana Rancic', title: "Chief of Staff", phone: 1234567890, email: "staff@ilmunc-india.com", image: "img/ana.jpg" },
+    { name: 'Elise Pi', title: "Chief of Operations", phone: 1234567890, email: "operations@ilmunc-india.com", image: "img/elise.jpg" },
+    { name: 'Dhruv Agarwal', title: "Under Secretary-General Operations", phone: 1234567890, email: "usg-ops@ilmunc-india.com", image: "img/dhruv.jpg" },
+    { name: 'Hannah White', title: "Under Secretary-General Administration", phone: 1234567890, email: "admin@ilmunc-india.com", image: "img/hannah.jpg" },
   ];
 
 });

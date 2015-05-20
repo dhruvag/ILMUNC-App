@@ -1,2 +1,3 @@
 C:\Users\Dhruv\conference\platforms\android\build\intermediates\classes\debug
 C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-6f5724a43218541987c5f1786698c18358f2a3d7.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\com.google.zxing.client.android.captureactivity-d2ab9aa1cefc8d014de248e6f6a17cb7d96421de.jar
