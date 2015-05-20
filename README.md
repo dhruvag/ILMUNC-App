@@ -7,10 +7,10 @@ The app is written in Javascript using the Ionic framework.
 #Things to Do
 
 1. Conference Schedule
-* Create views for all days
-* Link views with the tabbed navigation
-* Make the 'Add to Calendar' button functional
-* Dynamically populate views using a database
+	* Create views for all days
+	* Link views with the tabbed navigation
+	* Make the 'Add to Calendar' button functional
+	* Dynamically populate views using a database
 
 2. Commitees
-* Add 
+	* Add 
