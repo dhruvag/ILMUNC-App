@@ -5,10 +5,11 @@
                 <h2>Chairperson</h2>
             </div>
             <div class="item item-body">
-                <p>{{session.description}}</p>
+                <img style = "float: left; padding-right: 10px;" ng-src="{{committee.chairpic}}">
+                <p>{{committee.chair}}</p>
             </div>
             <div class="item tabs tabs-secondary tabs-icon-left">
-                <a class="tab-item">
+                <a ng-href ="mailto: {{committee.email}}" class="tab-item">
                     <i class="icon ion-email"></i>
                     Contact
                 </a>
@@ -19,14 +20,14 @@
                 <h2>Committee Information</h2>
             </div>
             <div class="item item-body">
-                <p>{{session.description}}</p>
+                <p>{{committee.description}}</p>
             </div>
             <div class="item tabs tabs-secondary tabs-icon-left">
                 <a class="tab-item">
                     <i class="icon ion-location"></i>
-                    Cohen Hall
+                    {{committee.location}}
                 </a>
-                 <a class="tab-item">
+                 <a onclick="window.open(encodeURI('{{commitee.bg}}'), '_blank', 'location=no');" class="tab-item">
                     <i class="icon ion-ios-book"></i>
                     View Background Guide
                 </a>

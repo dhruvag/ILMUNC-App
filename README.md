@@ -19,12 +19,12 @@ The app is written in Javascript using the Ionic framework.
 	* Add images for each of the committees
 	* Populate committee information 
 	* Dynamically populate views using database
-	* Link 'Contact' button to send email
+	~~* Link 'Contact' button to send email~~
 	* Link 'Background Guide' to pdf
 3. Maps
 	* Embed Google Map for 'Around the Hotel' view
 	* Obtain actual map data for hotel
-	* Adjust scorrling panes to new maps
+	* Adjust scrolling panes to new maps
 4. Preparation Guide
 	* Link opens in a new in app browser window
 	* Add accompnaying text
@@ -33,8 +33,8 @@ The app is written in Javascript using the Ionic framework.
 	* Find a way to store the QR Code data
 	* Display QR Code in app (optinal with login)
 6. Contact Us
-	* Link phone call buton to dialer
-	* Link email button to compose mail
+	~~* Link phone call buton to dialer~~
+	~~* Link email button to compose mail~~
 7. Sponsors
 	* Update with actual sponsor logos
 8. Facebook and Instagram

@@ -125,6 +125,8 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
   $urlRouterProvider.otherwise('/app/home');
 })
 
+
+
 .controller('confControl', function($scope,  $cordovaBarcodeScanner, $timeout, $cordovaFileTransfer) {
     $scope.active = 'thursday';
     $scope.setActive = function(type) {

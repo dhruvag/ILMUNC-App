@@ -39,6 +39,10 @@
                         {
                             "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -621,6 +625,9 @@
             "PACKAGE_NAME": "com.ionicframework.conference926829"
         },
         "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.conference926829"
+        },
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ionicframework.conference926829"
         }
     },

@@ -50,6 +50,11 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+        "id": "cordova-plugin-whitelist.whitelist",
+        "runs": true
+    },
+    {
         "file": "plugins/cordova-plugin-dialogs/www/notification.js",
         "id": "cordova-plugin-dialogs.notification",
         "merges": [
@@ -220,6 +225,7 @@ module.exports.metadata =
     "com.phonegap.plugins.barcodescanner": "2.2.0",
     "org.transistorsoft.cordova.background-geolocation": "0.3.6",
     "cordova-plugin-file-transfer": "1.1.0",
+    "cordova-plugin-whitelist": "1.0.0",
     "cordova-plugin-geolocation": "1.0.0",
     "cordova-plugin-dialogs": "1.1.0",
     "cordova-plugin-file": "2.0.0"
