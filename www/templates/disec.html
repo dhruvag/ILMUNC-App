@@ -1,32 +1,33 @@
-<ion-view title="Committee">
+<ion-view title="{{groups[0].items[0].name}}">
     <ion-content class="has-header">
-        <div class="list card" ng-repeat="disec in diescs">
+        <div class="list card">
             <div class="item">
                 <h2>Chairperson</h2>
             </div>
             <div class="item item-body">
-                <p>Roy Lan</p>
+                <img style = "float: left; padding-right: 15px;" ng-src="{{groups[0].items[0].chairPic}}">
+                <b style="font-size: 18px;">{{groups[0].items[0].chair}}</b>
             </div>
             <div class="item tabs tabs-secondary tabs-icon-left">
-                <a class="tab-item">
+                <a ng-href ="mailto: {{groups[0].items[0].email}}" class="tab-item">
                     <i class="icon ion-email"></i>
-                    roylan@uenn.edu
+                    Contact
                 </a>
             </div>
         </div>
-        <div class="list card" ng-repeat="disec in diescs">
+        <div class="list card">
             <div class="item">
                 <h2>Committee Information</h2>
             </div>
             <div class="item item-body">
-                <p>Blah blah blah blah</p>
+                <p>{{groups[0].items[0].description}}</p>
             </div>
             <div class="item tabs tabs-secondary tabs-icon-left">
                 <a class="tab-item">
                     <i class="icon ion-location"></i>
-                    Cohen Hall
+                    {{groups[0].items[0].location}}
                 </a>
-                 <a class="tab-item">
+                 <a onclick="window.open(encodeURI('{{groups[0].items[0].bg}}'), '_blank', 'location=no');" class="tab-item">
                     <i class="icon ion-ios-book"></i>
                     View Background Guide
                 </a>

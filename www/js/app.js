@@ -17,6 +17,7 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    window.open = cordova.InAppBrowser.open;
   });
 })
 
@@ -102,6 +103,78 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
     }
   })
 
+  .state('app.disec', {
+    url: "/disec",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/disec.html",
+      }
+    }
+  })
+
+  .state('app.specpol', {
+    url: "/specpol",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/specpol.html",
+      }
+    }
+  })
+
+  .state('app.legal', {
+    url: "/legal",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/legal.html",
+      }
+    }
+  })
+
+  .state('app.unhrc', {
+    url: "/unhrc",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/unhrc.html",
+      }
+    }
+  })
+
+  .state('app.unodc', {
+    url: "/unodc",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/unodc.html",
+      }
+    }
+  })
+
+  .state('app.constellis', {
+    url: "/constellis",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/constellis.html",
+      }
+    }
+  })
+
+  .state('app.security', {
+    url: "/security",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/security.html",
+      }
+    }
+  })
+
+  .state('app.russia', {
+    url: "/russia",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/russia.html",
+      }
+    }
+  })
+
     .state('app.sessions', {
   url: "/sessions",
   views: {
@@ -149,26 +222,29 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
      var committees = ['General Assembly', 'Specialized Committees', 'Crisis Committees']
     $scope.groups[0] = {
       name: committees[0],
-      items: []
+      items: [
+      {page: 'disec', name: 'Disarmament and International Security', comPic: 'img/disec.jpg', description: 'What the hell do we talk about here? What the hell do we talk about here', chair: 'Roy Lan', chairPic: '/img/roy.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall'},
+      {page: 'specpol', name: 'Special Political and Decolonization Committee', comPic: 'img/specpol.jpg', chair: 'Kavya Bodapati', chairPic: '/img/kavya.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'},
+      {page: 'legal', name: 'Legal', comPic: 'img/legal.jpg', chair: 'Elise Pi', chairPic: '/img/elise.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'}
+      ]
     };
-      $scope.groups[0].items.push('DISEC');
-      $scope.groups[0].items.push('SPECPOL');
-      $scope.groups[0].items.push('Legal');
        
     $scope.groups[1] = {
       name: committees[1],
-      items: []
+      items: [
+      {page: 'unhrc', name: 'Historical UN Commission on Human Rights', comPic: 'img/unhrc.jpg', chair: 'Rahima Jamal', chairPic: '/img/rahima.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+      {page: 'unodc', name: 'United Nations Office of Drug Control', comPic: 'img/unodc.jpg', chair: 'Ahmed Kamil', chairPic: '/img/ahmed.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
+      ]
     };
-      $scope.groups[1].items.push('Historical UNHRC');
-      $scope.groups[1].items.push('UNODC');
        
     $scope.groups[2] = {
       name: committees[2],
-      items: []
-    };
-      $scope.groups[2].items.push('Constellis & Syrian Government');
-      $scope.groups[2].items.push('Security Council');
-      $scope.groups[2].items.push('Reconstructing Russia');
+      items: [
+      {page: 'constellis', name: 'Constellis & Syrian Government', comPic: 'img/constellis.jpg', chair: 'Alex Kaplan', chairPic: '/img/kent.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+      {page: 'security', name: 'Security Council', comPic: 'img/security.jpg', chair: 'Dhrupad Bharadwaj', chairPic: '/img/dhrupad.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+      {page: 'russia', name: 'Reconstructing Russia', comPic: 'img/russia.jpg', chair: 'Kent Hutchinson', chairPic: '/img/alex.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
+      ]
+    };  
   
   /*
    * if given group is the selected group, deselect it
@@ -201,6 +277,7 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
     { name: 'Hannah White', title: "Under Secretary-General Administration", phone: 1234567890, email: "admin@ilmunc-india.com", image: "img/hannah.jpg" },
   ];
 
-});
+})
+
 
 
