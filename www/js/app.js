@@ -89,7 +89,7 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
     url: "/feedback",
     views: {
       'menuContent': {
-        templateUrl: "templates/feedback.html",
+        templateUrl: "templates/feedback.php",
       }
     }
   })

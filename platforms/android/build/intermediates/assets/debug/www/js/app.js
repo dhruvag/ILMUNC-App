@@ -89,7 +89,7 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
     url: "/feedback",
     views: {
       'menuContent': {
-        templateUrl: "templates/feedback.html",
+        templateUrl: "templates/feedback.php",
       }
     }
   })
@@ -244,7 +244,7 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
   };
 //, "phoneNumbers": [PHONE], "emails": [EMAIL]
   $scope.createContact = function() {
-    $cordovaContacts.save({"displayName": NAME, "phoneNumbers": [{"value": PHONE,"type": "mobile"}], "emails": [{"value": EMAIL, "type": "work"}], "organizations": ["ILMUNC India"]}).then(function(result) {
+    $cordovaContacts.save({"displayName": NAME, "phoneNumbers": [{"value": PHONE,"type": "mobile"}], "emails": [{"value": EMAIL, "type": "work"}]}).then(function(result) {
       alert('Contact has been added to you address book!');
     }, function(error) {
       console.log(error);

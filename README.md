@@ -37,7 +37,7 @@ The app is written in Javascript using the Ionic framework.
 8. Facebook and Instagram
 	* Link opens in a new in app browser window
 9. Feedback
-	* Connect form to database to store feedback
+	* ~~Connect form to database to store feedback~~
 
 #Additional Enhancements
 
