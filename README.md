@@ -28,7 +28,7 @@ The app is written in Javascript using the Ionic framework.
 5. People I've Met
 	* ~~Update title~~
 	* ~~Find a way to store the QR Code data~~
-	* ~~Display QR Code in app ~~
+	* ~~Display QR Code in app~~
 6. Contact Us
 	* ~~Link phone call buton to dialer~~
 	* ~~Link email button to compose mail~~
