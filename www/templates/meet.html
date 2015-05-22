@@ -1,8 +1,34 @@
-<ion-view view-title="Meet">
+<ion-view view-title="People I've Met">
   <ion-content class="has-header">
-  <div>
-  <img class = "center" width = "100px" height = "180px" src="img/qr.png" /> </div>
+  <!--<div>
+  <img class = "center" width = "100px" height = "180px" src="img/qr.png" /> </div>-->
   <div><br />
 <button class=" button button-positive center3" ng-click="scanBarcode()">Scan QR Code</button>  </div>  
+
+<div class="list card" ng-repeat="peep in peeps">
+	<div class="item item-divider"><b>{{peep.name}}</b></div>
+      <div class="item item-body">
+        <div>
+          Committee: {{peep.committee}}
+        </div>
+        <div>
+          Country: {{peep.country}}
+        </div>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+                <a ng-href="tel: {{peep.phone}}" class="tab-item">
+                    <i class="icon ion-iphone"></i>
+                    {{peep.phone}}
+                </a>
+                <a ng-href="mailto: {{peep.email}}" class="tab-item">
+                    <i class="icon ion-email"></i>
+                    {{peep.email}}
+                </a>
+                <button ng-click="createContact()" class="button button-clear tab-item">
+                   <i class="icon ion-person-add"></i>
+                    Add to Contacts
+                </button>
+            </div>
+    </div>
   </ion-content>
 </ion-view>

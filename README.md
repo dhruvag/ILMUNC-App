@@ -8,7 +8,7 @@ The app is written in Javascript using the Ionic framework.
 
 0. Home
 	* Fix splash scrren 
-	* Connect Facebook and Instagram links
+	* ~~Connect Facebook and Instagram links~~
 	* Add push notifications
 1. Conference Schedule
 	* Create views for all days
@@ -25,10 +25,10 @@ The app is written in Javascript using the Ionic framework.
 	* Adjust scrolling panes to new maps
 4. Preparation Guide
 	* Link opens in a new in app browser window
-5. Meet
-	* Update title
-	* Find a way to store the QR Code data
-	* Display QR Code in app (optinal with login)
+5. People I've Met
+	* ~~Update title~~
+	* ~~Find a way to store the QR Code data~~
+	* ~~Display QR Code in app ~~
 6. Contact Us
 	* ~~Link phone call buton to dialer~~
 	* ~~Link email button to compose mail~~

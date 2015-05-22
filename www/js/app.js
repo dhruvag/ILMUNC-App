@@ -10,10 +10,10 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if (window.StatusBar) {
+  if (window.cordova && window.cordova.plugins.Keyboard) {
+    cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+  }
+  if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
@@ -175,12 +175,12 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
     }
   })
 
-    .state('app.sessions', {
-  url: "/sessions",
-  views: {
+  .state('app.sessions', {
+    url: "/sessions",
+    views: {
       'menuContent': {
-          templateUrl: "templates/sessions.html",
-          controller: 'SessionsCtrl'
+        templateUrl: "templates/sessions.html",
+        controller: 'SessionsCtrl'
       }
     }
   })
@@ -188,69 +188,108 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
   .state('app.session', {
     url: "/sessions/:sessionId",
     views: {
-        'menuContent': {
-          templateUrl: "templates/session.html",
-          controller: 'SessionCtrl'
-        }
+      'menuContent': {
+        templateUrl: "templates/session.html",
+        controller: 'SessionCtrl'
       }
-    });
+    }
+  });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 })
 
 
 
-.controller('confControl', function($scope,  $cordovaBarcodeScanner, $timeout, $cordovaFileTransfer) {
-    $scope.active = 'thursday';
-    $scope.setActive = function(type) {
-        $scope.active = type;
-    };
+.controller('confControl', function($scope,  $cordovaBarcodeScanner, $timeout, $cordovaContacts, $cordovaFileTransfer) {
+  var NAME = "";
+  var PHONE = "";
+  var EMAIL = "";
+  var COMMITTEE = "";
+  var COUNTRY = "";
 
-    $scope.isActive = function(type) {
-        return type === $scope.active;
-    };
+  $scope.active = 'thursday';
+  $scope.setActive = function(type) {
+    $scope.active = type;
+  };
 
-    $scope.scanBarcode = function() {
-        $cordovaBarcodeScanner.scan().then(function(imageData) {
-            alert(imageData.text);
-        }, function(error) {
-            console.log("An error happened -> " + error);
-        });
-    };
+  $scope.isActive = function(type) {
+    return type === $scope.active;
+  };
 
-     $scope.groups = [];
-     var committees = ['General Assembly', 'Specialized Committees', 'Crisis Committees']
-    $scope.groups[0] = {
-      name: committees[0],
-      items: [
-      {page: 'disec', name: 'Disarmament and International Security', comPic: 'img/disec.jpg', description: 'What the hell do we talk about here? What the hell do we talk about here', chair: 'Roy Lan', chairPic: '/img/roy.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall'},
-      {page: 'specpol', name: 'Special Political and Decolonization Committee', comPic: 'img/specpol.jpg', chair: 'Kavya Bodapati', chairPic: '/img/kavya.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'},
-      {page: 'legal', name: 'Legal', comPic: 'img/legal.jpg', chair: 'Elise Pi', chairPic: '/img/elise.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'}
-      ]
-    };
-       
-    $scope.groups[1] = {
-      name: committees[1],
-      items: [
-      {page: 'unhrc', name: 'Historical UN Commission on Human Rights', comPic: 'img/unhrc.jpg', chair: 'Rahima Jamal', chairPic: '/img/rahima.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-      {page: 'unodc', name: 'United Nations Office of Drug Control', comPic: 'img/unodc.jpg', chair: 'Ahmed Kamil', chairPic: '/img/ahmed.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
-      ]
-    };
-       
-    $scope.groups[2] = {
-      name: committees[2],
-      items: [
-      {page: 'constellis', name: 'Constellis & Syrian Government', comPic: 'img/constellis.jpg', chair: 'Alex Kaplan', chairPic: '/img/kent.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-      {page: 'security', name: 'Security Council', comPic: 'img/security.jpg', chair: 'Dhrupad Bharadwaj', chairPic: '/img/dhrupad.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-      {page: 'russia', name: 'Reconstructing Russia', comPic: 'img/russia.jpg', chair: 'Kent Hutchinson', chairPic: '/img/alex.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
-      ]
-    };  
+  $scope.doRefresh = function() {
+    console.log('Refreshing!');
+    $timeout(function() {
+      //simulate async response
+      $scope.peeps.push({name: NAME, phone: PHONE, email: EMAIL, country: COUNTRY, committee: COMMITTEE});
+      //Stop the ion-refresher from spinning
+      $scope.$broadcast('scroll.refreshComplete');
+    }, 1000);
+
+  };
+
+  $scope.scanBarcode = function() {
+    $cordovaBarcodeScanner.scan().then(function(imageData) {
+     //Santosh Vallabhaneni~1234567890~sec-gen@ilmunc-india.com~Reconstructing Russia~United States of America
+     var split = imageData.text.split('~');
+     NAME = split[0];
+     PHONE = parseInt(split[1]);
+     EMAIL = split[2];
+     COMMITTEE = split[3];
+     COUNTRY = split[4];
+     if (NAME == "") {alert('Didn\'t quite get that! Please try again');}
+     if (NAME != "") {$scope.doRefresh();}
+   }, function(error) {
+    console.log("An error happened -> " + error);
+  });
+  };
+//, "phoneNumbers": [PHONE], "emails": [EMAIL]
+  $scope.createContact = function() {
+    $cordovaContacts.save({"displayName": NAME, "phoneNumbers": [{"value": PHONE,"type": "mobile"}], "emails": [{"value": EMAIL, "type": "work"}]}).then(function(result) {
+      alert('Contact has been added to you address book!');
+    }, function(error) {
+      console.log(error);
+    });
+  };
+
+  NAME = "";
+  PHONE = "";
+  EMAIL = "";
+  COMMITTEE = "";
+  COUNTRY = "";
+
+  $scope.groups = [];
+  var committees = ['General Assembly', 'Specialized Committees', 'Crisis Committees']
+  $scope.groups[0] = {
+    name: committees[0],
+    items: [
+    {page: 'disec', name: 'Disarmament and International Security', comPic: 'img/disec.jpg', description: 'What the hell do we talk about here? What the hell do we talk about here', chair: 'Roy Lan', chairPic: '/img/roy.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall'},
+    {page: 'specpol', name: 'Special Political and Decolonization Committee', comPic: 'img/specpol.jpg', chair: 'Kavya Bodapati', chairPic: '/img/kavya.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'},
+    {page: 'legal', name: 'Legal', comPic: 'img/legal.jpg', chair: 'Elise Pi', chairPic: '/img/elise.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'}
+    ]
+  };
+
+  $scope.groups[1] = {
+    name: committees[1],
+    items: [
+    {page: 'unhrc', name: 'Historical UN Commission on Human Rights', comPic: 'img/unhrc.jpg', chair: 'Rahima Jamal', chairPic: '/img/rahima.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+    {page: 'unodc', name: 'United Nations Office of Drug Control', comPic: 'img/unodc.jpg', chair: 'Ahmed Kamil', chairPic: '/img/ahmed.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
+    ]
+  };
+
+  $scope.groups[2] = {
+    name: committees[2],
+    items: [
+    {page: 'constellis', name: 'Constellis & Syrian Government', comPic: 'img/constellis.jpg', chair: 'Alex Kaplan', chairPic: '/img/kent.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+    {page: 'security', name: 'Security Council', comPic: 'img/security.jpg', chair: 'Dhrupad Bharadwaj', chairPic: '/img/dhrupad.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+    {page: 'russia', name: 'Reconstructing Russia', comPic: 'img/russia.jpg', chair: 'Kent Hutchinson', chairPic: '/img/alex.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
+    ]
+  };  
   
   /*
    * if given group is the selected group, deselect it
    * else, select the given group
    */
-  $scope.toggleGroup = function(group) {
+   $scope.toggleGroup = function(group) {
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
     } else {
@@ -261,20 +300,24 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
     return $scope.shownGroup === group;
   };
 
-    $scope.tasks = [
-    { title: 'New Delhi Tours', description: "This is gonna be awesome", time: "9.30am - 10.30am", location: "College Hall" },
-    { title: 'Committee Session I', description: "This is gonna be great", time: "10.30am - 11.30am", location: "Wynn Commons"  },
-    { title: 'Lunch Break', description: "This is gonna be lovely", time: "11.30am - 12.30pm", location: "Houston Hall"  },
-    { title: 'Delegate Fest', description: "This is gonna be fantastic", time: "12.30pm - 1.00pm", location: "Cohen Hall"  }
+  $scope.tasks = [
+  { title: 'New Delhi Tours', description: "This is gonna be awesome", time: "9.30am - 10.30am", location: "College Hall" },
+  { title: 'Committee Session I', description: "This is gonna be great", time: "10.30am - 11.30am", location: "Wynn Commons"  },
+  { title: 'Lunch Break', description: "This is gonna be lovely", time: "11.30am - 12.30pm", location: "Houston Hall"  },
+  { title: 'Delegate Fest', description: "This is gonna be fantastic", time: "12.30pm - 1.00pm", location: "Cohen Hall"  }
   ];
 
   $scope.secs = [
-    { name: 'Santosh Vallabhaneni', title: "Secretary-General", phone: 1234567890, email: "sec-gen@ilmunc-india.com", image: "img/sunny.jpg" },
-    { name: 'Jyothi Vallurupalli', title: "Director-General", phone: 1234567890, email: "dir-gen@ilmunc-india.com", image: "img/jyothi.jpg" },
-    { name: 'Ana Rancic', title: "Chief of Staff", phone: 1234567890, email: "staff@ilmunc-india.com", image: "img/ana.jpg" },
-    { name: 'Elise Pi', title: "Chief of Operations", phone: 1234567890, email: "operations@ilmunc-india.com", image: "img/elise.jpg" },
-    { name: 'Dhruv Agarwal', title: "Under Secretary-General Operations", phone: 1234567890, email: "usg-ops@ilmunc-india.com", image: "img/dhruv.jpg" },
-    { name: 'Hannah White', title: "Under Secretary-General Administration", phone: 1234567890, email: "admin@ilmunc-india.com", image: "img/hannah.jpg" },
+  { name: 'Santosh Vallabhaneni', title: "Secretary-General", phone: 1234567890, email: "sec-gen@ilmunc-india.com", image: "img/sunny.jpg" },
+  { name: 'Jyothi Vallurupalli', title: "Director-General", phone: 1234567890, email: "dir-gen@ilmunc-india.com", image: "img/jyothi.jpg" },
+  { name: 'Ana Rancic', title: "Chief of Staff", phone: 1234567890, email: "staff@ilmunc-india.com", image: "img/ana.jpg" },
+  { name: 'Elise Pi', title: "Chief of Operations", phone: 1234567890, email: "operations@ilmunc-india.com", image: "img/elise.jpg" },
+  { name: 'Dhruv Agarwal', title: "Under Secretary-General Operations", phone: 1234567890, email: "usg-ops@ilmunc-india.com", image: "img/dhruv.jpg" },
+  { name: 'Hannah White', title: "Under Secretary-General Administration", phone: 1234567890, email: "admin@ilmunc-india.com", image: "img/hannah.jpg" },
+  ];
+
+  $scope.peeps = [
+  {name: 'Dhruv Agarwal', phone: 2679128714, email: 'usg-ops@ilmunc-india.com', country: 'Djibouti', committee: 'SPECPOL'},
   ];
 
 })
