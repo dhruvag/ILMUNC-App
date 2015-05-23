@@ -7,7 +7,7 @@ The app is written in Javascript using the Ionic framework.
 #Things to Do
 
 0. Home
-	* Fix splash scrren 
+	* ~~Fix splash screen~~ 
 	* ~~Connect Facebook and Instagram links~~
 	* Add push notifications
 1. Conference Schedule
@@ -24,7 +24,7 @@ The app is written in Javascript using the Ionic framework.
 	* Obtain actual map data for hotel
 	* Adjust scrolling panes to new maps
 4. Preparation Guide
-	* Link opens in a new in app browser window
+	* ~~Link opens in a new in app browser window~~
 5. People I've Met
 	* ~~Update title~~
 	* ~~Find a way to store the QR Code data~~
@@ -35,19 +35,7 @@ The app is written in Javascript using the Ionic framework.
 7. Sponsors
 	* Update with actual sponsor logos
 8. Facebook and Instagram
-	* Link opens in a new in app browser window
+	* ~~Link opens in a new in app browser window~~
 9. Feedback
 	* ~~Connect form to database to store feedback~~
-
-#Additional Enhancements
-
-1. Login 
-	* Add login screen to personalize
-	* Connect login to database
-	* Add login via Facebook
-2. Chat
-	* Add chat interface
-	* Connect interface to backend
-	* Connect chat with login
-3. 	Dynamically populate views using database
 	

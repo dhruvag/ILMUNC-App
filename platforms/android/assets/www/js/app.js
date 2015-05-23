@@ -4,7 +4,21 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
+angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ionic.service.core', 'ionic.service.push'])
+
+.config(['$ionicAppProvider', function($ionicAppProvider) {
+  // Identify app
+  $ionicAppProvider.identify({
+    // Your App ID
+    app_id: 'bbb16289',
+    // The public API key services will use for this app
+    api_key: '0db913b237dcdae18095f22b4e628ab11ceb39e699b55994',
+    // Your GCM sender ID/project number (Uncomment if supporting Android)
+    gcm_id: '775496133916',
+    dev_push: true
+  });
+
+}])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -85,11 +99,20 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
     }
   })
 
+  .state('app.polling', {
+    url: "/polling",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/polling.html",
+      }
+    }
+  })
+
   .state('app.feedback', {
     url: "/feedback",
     views: {
       'menuContent': {
-        templateUrl: "templates/feedback.php",
+        templateUrl: "templates/feedback.html",
       }
     }
   })
@@ -206,7 +229,10 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
   var EMAIL = "";
   var COMMITTEE = "";
   var COUNTRY = "";
-
+  var POLL = "";
+  // $scope.identifyUser();
+  // $scope.pushRegister();
+  
   $scope.active = 'thursday';
   $scope.setActive = function(type) {
     $scope.active = type;
@@ -215,6 +241,16 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
   $scope.isActive = function(type) {
     return type === $scope.active;
   };
+
+  $scope.scanPoll = function() {
+    $cordovaBarcodeScanner.scan().then(function(pollData) {
+      POLL = pollData.text;
+      if(POLL != "") {window.open(encodeURI(pollData.text), '_blank', 'location=yes', 'toolbar=yes');}
+   }, function(error) {
+    console.log("An error happened -> " + error);
+  });
+  };
+
 
   $scope.doRefresh = function() {
     console.log('Refreshing!');
@@ -262,26 +298,26 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers'])
   $scope.groups[0] = {
     name: committees[0],
     items: [
-    {page: 'disec', name: 'Disarmament and International Security', comPic: 'img/disec.jpg', description: 'What the hell do we talk about here? What the hell do we talk about here', chair: 'Roy Lan', chairPic: '/img/roy.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall'},
-    {page: 'specpol', name: 'Special Political and Decolonization Committee', comPic: 'img/specpol.jpg', chair: 'Kavya Bodapati', chairPic: '/img/kavya.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'},
-    {page: 'legal', name: 'Legal', comPic: 'img/legal.jpg', chair: 'Elise Pi', chairPic: '/img/elise.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'}
+    {page: 'disec', name: 'Disarmament and International Security', comPic: 'img/disec.jpg', description: 'What the hell do we talk about here? What the hell do we talk about here', chair: 'Roy Lan', chairPic: '../img/roy.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall'},
+    {page: 'specpol', name: 'Special Political and Decolonization Committee', comPic: 'img/specpol.jpg', chair: 'Kavya Bodapati', chairPic: '../img/kavya.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'},
+    {page: 'legal', name: 'Legal', comPic: 'img/legal.jpg', chair: 'Elise Pi', chairPic: '../img/elise.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'}
     ]
   };
 
   $scope.groups[1] = {
     name: committees[1],
     items: [
-    {page: 'unhrc', name: 'Historical UN Commission on Human Rights', comPic: 'img/unhrc.jpg', chair: 'Rahima Jamal', chairPic: '/img/rahima.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-    {page: 'unodc', name: 'United Nations Office of Drug Control', comPic: 'img/unodc.jpg', chair: 'Ahmed Kamil', chairPic: '/img/ahmed.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
+    {page: 'unhrc', name: 'Historical UN Commission on Human Rights', comPic: 'img/unhrc.jpg', chair: 'Rahima Jamal', chairPic: '../img/rahima.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+    {page: 'unodc', name: 'United Nations Office of Drug Control', comPic: 'img/unodc.jpg', chair: 'Ahmed Kamil', chairPic: '../img/ahmed.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
     ]
   };
 
   $scope.groups[2] = {
     name: committees[2],
     items: [
-    {page: 'constellis', name: 'Constellis & Syrian Government', comPic: 'img/constellis.jpg', chair: 'Alex Kaplan', chairPic: '/img/kent.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-    {page: 'security', name: 'Security Council', comPic: 'img/security.jpg', chair: 'Dhrupad Bharadwaj', chairPic: '/img/dhrupad.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-    {page: 'russia', name: 'Reconstructing Russia', comPic: 'img/russia.jpg', chair: 'Kent Hutchinson', chairPic: '/img/alex.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
+    {page: 'constellis', name: 'Constellis & Syrian Government', comPic: 'img/constellis.jpg', chair: 'Alex Kaplan', chairPic: '../img/kent.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+    {page: 'security', name: 'Security Council', comPic: 'img/security.jpg', chair: 'Dhrupad Bharadwaj', chairPic: '../img/dhrupad.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+    {page: 'russia', name: 'Reconstructing Russia', comPic: 'img/russia.jpg', chair: 'Kent Hutchinson', chairPic: '../img/alex.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
     ]
   };  
   

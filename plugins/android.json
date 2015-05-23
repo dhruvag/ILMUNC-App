@@ -17,10 +17,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
                             "count": 1
                         },
@@ -46,6 +42,14 @@
                         },
                         {
                             "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -631,9 +635,6 @@
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.ionicframework.conference926829"
         },
-        "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.ionicframework.conference926829"
-        },
         "com.phonegap.plugins.barcodescanner": {
             "PACKAGE_NAME": "com.ionicframework.conference926829"
         },
@@ -647,6 +648,12 @@
             "PACKAGE_NAME": "com.ionicframework.conference926829"
         },
         "org.apache.cordova.contacts": {
+            "PACKAGE_NAME": "com.ionicframework.conference926829"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.conference926829"
+        },
+        "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "com.ionicframework.conference926829"
         }
     },

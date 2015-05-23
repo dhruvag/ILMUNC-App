@@ -17,14 +17,6 @@
             "id": "com.ionic.keyboard"
         }
     },
-    "org.apache.cordova.inappbrowser": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.inappbrowser"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "com.phonegap.plugins.barcodescanner": {
         "source": {
             "type": "git",
@@ -91,15 +83,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-inappbrowser": {
-        "source": {
-            "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
@@ -112,6 +95,22 @@
         "source": {
             "type": "registry",
             "id": "org.apache.cordova.contacts"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.inappbrowser"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.splashscreen"
         },
         "is_top_level": true,
         "variables": {}
