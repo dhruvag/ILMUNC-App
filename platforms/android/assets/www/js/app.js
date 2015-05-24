@@ -242,6 +242,41 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ioni
     return type === $scope.active;
   };
 
+  $scope.thursday = function() {
+    $scope.tasks = [];
+    $scope.tasks.push({ title: 'Conference Registration', description: "This is gonna be awesome", time: "12.00pm - 6.00pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Hotel Check-in and Registration', description: "This is gonna be great", time: "2.00pm - 6.00pm", location: "Wynn Commons"  });
+    $scope.tasks.push({ title: 'Pre-Conference Training and Workshops', description: "This is gonna be lovely", time: "4.00pmm - 5.30pm", location: "Houston Hall"  });
+    $scope.tasks.push({ title: 'Opening Ceremonies', description: "This is gonna be fantastic", time: "7.00pm - 8.00pm", location: "Cohen Hall"  });
+    $scope.tasks.push({ title: 'Committee Session I', description: "This is gonna be fantastic", time: "8.30pm - 11.30pm", location: "Cohen Hall"  });
+    $scope.tasks.push({ title: 'Faculty Advisor Reception', description: "This is gonna be fantastic", time: "9.30pm - 10.30pm", location: "Cohen Hall"  });
+  };
+
+  $scope.friday = function() {
+    $scope.tasks = [];
+    $scope.tasks.push({ title: 'Exploration of Delhi', description: "This is gonna be awesome", time: "9.00am - 2.00pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'College Fair', description: "This is gonna be awesome", time: "12.00pm - 2.00pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Committee Session II', description: "This is gonna be awesome", time: "2.00pm - 5.30pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Dinner Break', description: "This is gonna be awesome", time: "5.30pm - 7.00pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Committee Session III', description: "This is gonna be awesome", time: "7.00pm - 10.00pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Delegate Fest', description: "This is gonna be awesome", time: "11.00pm - 12.00am", location: "College Hall" });
+  };
+
+  $scope.saturday = function() {
+    $scope.tasks = [];
+    $scope.tasks.push({ title: 'Committee Session III', description: "This is gonna be awesome", time: "9.30am - .00pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Lunch Break', description: "This is gonna be awesome", time: "1.00pm - 2.30pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Committee Session V', description: "This is gonna be awesome", time: "2.30pm - 6.00pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Dinner Break', description: "This is gonna be awesome", time: "6.00pm - 0.00pm", location: "College Hall" });
+    $scope.tasks.push({ title: 'Delegate Dance', description: "This is gonna be awesome", time: "9.00pm - 12.00am", location: "College Hall" });
+  };
+
+  $scope.sunday = function() {
+    $scope.tasks = [];
+    $scope.tasks.push({ title: 'Committee Session VI', description: "This is gonna be awesome", time: "9.00am - 10.30am", location: "College Hall" });
+    $scope.tasks.push({ title: 'Closing Ceremonies', description: "This is gonna be awesome", time: "12.00pm - 1.30pm", location: "College Hall" });
+  };
+
   $scope.scanPoll = function() {
     $cordovaBarcodeScanner.scan().then(function(pollData) {
       POLL = pollData.text;
@@ -337,10 +372,12 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ioni
   };
 
   $scope.tasks = [
-  { title: 'New Delhi Tours', description: "This is gonna be awesome", time: "9.30am - 10.30am", location: "College Hall" },
-  { title: 'Committee Session I', description: "This is gonna be great", time: "10.30am - 11.30am", location: "Wynn Commons"  },
-  { title: 'Lunch Break', description: "This is gonna be lovely", time: "11.30am - 12.30pm", location: "Houston Hall"  },
-  { title: 'Delegate Fest', description: "This is gonna be fantastic", time: "12.30pm - 1.00pm", location: "Cohen Hall"  }
+    { title: 'Conference Registration', description: "This is gonna be awesome", time: "12.00pm - 6.00pm", location: "College Hall" },
+    { title: 'Hotel Check-in and Registration', description: "This is gonna be great", time: "2.00pm - 6.00pm", location: "Wynn Commons"  },
+    { title: 'Pre-Conference Training and Workshops', description: "This is gonna be lovely", time: "4.00pmm - 5.30pm", location: "Houston Hall"  },
+    { title: 'Opening Ceremonies', description: "This is gonna be fantastic", time: "7.00pm - 8.00pm", location: "Cohen Hall"  },
+    { title: 'Committee Session I', description: "This is gonna be fantastic", time: "8.30pm - 11.30pm", location: "Cohen Hall"  },
+    { title: 'Faculty Advisor Reception', description: "This is gonna be fantastic", time: "9.30pm - 10.30pm", location: "Cohen Hall"  }
   ];
 
   $scope.secs = [

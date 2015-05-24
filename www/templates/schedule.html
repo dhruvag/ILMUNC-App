@@ -7,16 +7,16 @@
 </ion-nav-bar>
 <div class="bar bar-subheader">
       <div class=" button-bar">
-        <button class="button button-light" ng-class="{ 'button-positive': isActive('thursday')}" ng-click="setActive('thursday')">
+        <button class="button button-light" ng-class="{ 'button-positive': isActive('thursday')}" ng-click="setActive('thursday'); thursday()">
           Thursday
         </button>
-        <button class="button button-light" ng-class="{ 'button-positive': isActive('friday')}" ng-click="setActive('friday')">
+        <button class="button button-light" ng-class="{ 'button-positive': isActive('friday')}" ng-click="setActive('friday'); friday()">
           Friday
         </button>
-        <button class="button button-light" ng-class="{ 'button-positive': isActive('saturday')}" ng-click="setActive('saturday')">
+        <button class="button button-light" ng-class="{ 'button-positive': isActive('saturday')}" ng-click="setActive('saturday'); saturday()">
           Saturday
         </button>
-         <button class="button button-light" ng-class="{ 'button-positive': isActive('sunday')}" ng-click="setActive('sunday')" href="#/app/contact/">
+         <button class="button button-light" ng-class="{ 'button-positive': isActive('sunday')}" ng-click="setActive('sunday'); sunday()">
           Sunday
         </button>
       </div>

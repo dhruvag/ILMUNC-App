@@ -11,8 +11,8 @@ The app is written in Javascript using the Ionic framework.
 	* ~~Connect Facebook and Instagram links~~
 	* Add push notifications
 1. Conference Schedule
-	* Create views for all days
-	* Link views with the tabbed navigation
+	* ~~Create views for all days~~
+	* ~~Link views with the tabbed navigation~~
 	* Make the 'Add to Calendar' button functional
 2. Commitees
 	* ~~Add images for each of the committees~~
