@@ -125,6 +125,17 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/nl.x-services.plugins.calendar/www/Calendar.js",
+        "id": "nl.x-services.plugins.calendar.Calendar",
+        "clobbers": [
+            "Calendar"
+        ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.calendar/test/tests.js",
+        "id": "nl.x-services.plugins.calendar.tests"
+    },
+    {
         "file": "plugins/cordova-plugin-dialogs/www/notification.js",
         "id": "cordova-plugin-dialogs.notification",
         "merges": [
@@ -298,6 +309,7 @@ module.exports.metadata =
     "org.apache.cordova.contacts": "0.2.16",
     "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.splashscreen": "1.0.0",
+    "nl.x-services.plugins.calendar": "4.3.5",
     "cordova-plugin-geolocation": "1.0.0",
     "cordova-plugin-dialogs": "1.1.0",
     "cordova-plugin-file": "2.0.0"

@@ -18,7 +18,8 @@
     "org.apache.cordova.console",
     "org.apache.cordova.device",
     "com.ionic.keyboard",
-    "org.apache.cordova.splashscreen"
+    "org.apache.cordova.splashscreen",
+    "https://github.com/EddyVerbruggen/Calendar-Phonegap-Plugin.git"
   ],
   "cordovaPlatforms": [
     "android"

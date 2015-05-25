@@ -277,13 +277,25 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ioni
     $scope.tasks.push({ title: 'Closing Ceremonies', description: "This is gonna be awesome", time: "12.00pm - 1.30pm", location: "College Hall" });
   };
 
+  $scope.createEvent = function() {
+    var START = new Date(2015,4,26,18,30,0,0,0); // beware: month 0 = january, 11 = december
+    var END = new Date(2015,4,26,19,30,0,0,0);
+    var TITLE = $scope.tasks.title;
+    var LOCATION = $scope.tasks.location;
+    var NOTES = $scope.tasks.description;
+    var SUCCESS = alert("Success");
+    var ERROR = alert("Error");
+
+     window.plugins.calendar.createEventInteractively(TITLE,LOCATION,NOTES,START,END,SUCCESS,ERROR);
+  }
+
   $scope.scanPoll = function() {
     $cordovaBarcodeScanner.scan().then(function(pollData) {
       POLL = pollData.text;
       if(POLL != "") {window.open(encodeURI(pollData.text), '_blank', 'location=yes', 'toolbar=yes');}
-   }, function(error) {
-    console.log("An error happened -> " + error);
-  });
+    }, function(error) {
+      console.log("An error happened -> " + error);
+    });
   };
 
 
@@ -314,48 +326,48 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ioni
   });
   };
 //, "phoneNumbers": [PHONE], "emails": [EMAIL]
-  $scope.createContact = function() {
-    $cordovaContacts.save({"displayName": NAME, "phoneNumbers": [{"value": PHONE,"type": "mobile"}], "emails": [{"value": EMAIL, "type": "work"}]}).then(function(result) {
-      alert('Contact has been added to you address book!');
-    }, function(error) {
-      console.log(error);
-    });
-  };
+$scope.createContact = function() {
+  $cordovaContacts.save({"displayName": NAME, "phoneNumbers": [{"value": PHONE,"type": "mobile"}], "emails": [{"value": EMAIL, "type": "work"}]}).then(function(result) {
+    alert('Contact has been added to you address book!');
+  }, function(error) {
+    console.log(error);
+  });
+};
 
-  NAME = "";
-  PHONE = "";
-  EMAIL = "";
-  COMMITTEE = "";
-  COUNTRY = "";
+NAME = "";
+PHONE = "";
+EMAIL = "";
+COMMITTEE = "";
+COUNTRY = "";
 
-  $scope.groups = [];
-  var committees = ['General Assembly', 'Specialized Committees', 'Crisis Committees']
-  $scope.groups[0] = {
-    name: committees[0],
-    items: [
-    {page: 'disec', name: 'Disarmament and International Security', comPic: 'img/disec.jpg', description: 'What the hell do we talk about here? What the hell do we talk about here', chair: 'Roy Lan', chairPic: '../img/roy.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall'},
-    {page: 'specpol', name: 'Special Political and Decolonization Committee', comPic: 'img/specpol.jpg', chair: 'Kavya Bodapati', chairPic: '../img/kavya.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'},
-    {page: 'legal', name: 'Legal', comPic: 'img/legal.jpg', chair: 'Elise Pi', chairPic: '../img/elise.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'}
-    ]
-  };
+$scope.groups = [];
+var committees = ['General Assembly', 'Specialized Committees', 'Crisis Committees']
+$scope.groups[0] = {
+  name: committees[0],
+  items: [
+  {page: 'disec', name: 'Disarmament and International Security', comPic: 'img/disec.jpg', description: 'What the hell do we talk about here? What the hell do we talk about here', chair: 'Roy Lan', chairPic: 'img/roy.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall'},
+  {page: 'specpol', name: 'Special Political and Decolonization Committee', comPic: 'img/specpol.jpg', chair: 'Kavya Bodapati', chairPic: 'img/kavya.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'},
+  {page: 'legal', name: 'Legal', comPic: 'img/legal.jpg', chair: 'Elise Pi', chairPic: 'img/elise.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here'}
+  ]
+};
 
-  $scope.groups[1] = {
-    name: committees[1],
-    items: [
-    {page: 'unhrc', name: 'Historical UN Commission on Human Rights', comPic: 'img/unhrc.jpg', chair: 'Rahima Jamal', chairPic: '../img/rahima.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-    {page: 'unodc', name: 'United Nations Office of Drug Control', comPic: 'img/unodc.jpg', chair: 'Ahmed Kamil', chairPic: '../img/ahmed.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
-    ]
-  };
+$scope.groups[1] = {
+  name: committees[1],
+  items: [
+  {page: 'unhrc', name: 'Historical UN Commission on Human Rights', comPic: 'img/unhrc.jpg', chair: 'Rahima Jamal', chairPic: 'img/rahima.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+  {page: 'unodc', name: 'United Nations Office of Drug Control', comPic: 'img/unodc.jpg', chair: 'Ahmed Kamil', chairPic: 'img/ahmed.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
+  ]
+};
 
-  $scope.groups[2] = {
-    name: committees[2],
-    items: [
-    {page: 'constellis', name: 'Constellis & Syrian Government', comPic: 'img/constellis.jpg', chair: 'Alex Kaplan', chairPic: '../img/kent.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-    {page: 'security', name: 'Security Council', comPic: 'img/security.jpg', chair: 'Dhrupad Bharadwaj', chairPic: '../img/dhrupad.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
-    {page: 'russia', name: 'Reconstructing Russia', comPic: 'img/russia.jpg', chair: 'Kent Hutchinson', chairPic: '../img/alex.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
-    ]
-  };  
-  
+$scope.groups[2] = {
+  name: committees[2],
+  items: [
+  {page: 'constellis', name: 'Constellis & Syrian Government', comPic: 'img/constellis.jpg', chair: 'Alex Kaplan', chairPic: 'img/kent.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+  {page: 'security', name: 'Security Council', comPic: 'img/security.jpg', chair: 'Dhrupad Bharadwaj', chairPic: 'img/dhrupad.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',},
+  {page: 'russia', name: 'Reconstructing Russia', comPic: 'img/russia.jpg', chair: 'Kent Hutchinson', chairPic: 'img/alex.jpg', email: 'roy.lan@upenn.edu', location: 'Cohen Hall', description: 'What the hell do we talk about here? What the hell do we talk about here',}
+  ]
+};  
+
   /*
    * if given group is the selected group, deselect it
    * else, select the given group
@@ -372,12 +384,12 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ioni
   };
 
   $scope.tasks = [
-    { title: 'Conference Registration', description: "This is gonna be awesome", time: "12.00pm - 6.00pm", location: "College Hall" },
-    { title: 'Hotel Check-in and Registration', description: "This is gonna be great", time: "2.00pm - 6.00pm", location: "Wynn Commons"  },
-    { title: 'Pre-Conference Training and Workshops', description: "This is gonna be lovely", time: "4.00pmm - 5.30pm", location: "Houston Hall"  },
-    { title: 'Opening Ceremonies', description: "This is gonna be fantastic", time: "7.00pm - 8.00pm", location: "Cohen Hall"  },
-    { title: 'Committee Session I', description: "This is gonna be fantastic", time: "8.30pm - 11.30pm", location: "Cohen Hall"  },
-    { title: 'Faculty Advisor Reception', description: "This is gonna be fantastic", time: "9.30pm - 10.30pm", location: "Cohen Hall"  }
+  { title: 'Conference Registration', description: "This is gonna be awesome", time: "12.00pm - 6.00pm", location: "College Hall" },
+  { title: 'Hotel Check-in and Registration', description: "This is gonna be great", time: "2.00pm - 6.00pm", location: "Wynn Commons"  },
+  { title: 'Pre-Conference Training and Workshops', description: "This is gonna be lovely", time: "4.00pmm - 5.30pm", location: "Houston Hall"  },
+  { title: 'Opening Ceremonies', description: "This is gonna be fantastic", time: "7.00pm - 8.00pm", location: "Cohen Hall"  },
+  { title: 'Committee Session I', description: "This is gonna be fantastic", time: "8.30pm - 11.30pm", location: "Cohen Hall"  },
+  { title: 'Faculty Advisor Reception', description: "This is gonna be fantastic", time: "9.30pm - 10.30pm", location: "Cohen Hall"  }
   ];
 
   $scope.secs = [

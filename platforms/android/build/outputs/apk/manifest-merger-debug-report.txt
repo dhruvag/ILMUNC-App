@@ -186,3 +186,11 @@ uses-permission#android.permission.GET_ACCOUNTS
 ADDED from AndroidManifest.xml:45:5
 	android:name
 		ADDED from AndroidManifest.xml:45:22
+uses-permission#android.permission.READ_CALENDAR
+ADDED from AndroidManifest.xml:46:5
+	android:name
+		ADDED from AndroidManifest.xml:46:22
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from AndroidManifest.xml:47:5
+	android:name
+		ADDED from AndroidManifest.xml:47:22

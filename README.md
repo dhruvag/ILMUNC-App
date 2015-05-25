@@ -13,7 +13,6 @@ The app is written in Javascript using the Ionic framework.
 1. Conference Schedule
 	* ~~Create views for all days~~
 	* ~~Link views with the tabbed navigation~~
-	* Make the 'Add to Calendar' button functional
 2. Commitees
 	* ~~Add images for each of the committees~~
 	* ~~Populate committee information~~
@@ -21,8 +20,6 @@ The app is written in Javascript using the Ionic framework.
 	* Link 'Background Guide' to pdf
 3. Maps
 	* ~~Embed Google Map for 'Around the Hotel' view~~
-	* Obtain actual map data for hotel
-	* Adjust scrolling panes to new maps
 4. Preparation Guide
 	* ~~Link opens in a new in app browser window~~
 5. People I've Met
@@ -31,9 +28,7 @@ The app is written in Javascript using the Ionic framework.
 	* ~~Display QR Code in app~~
 6. Contact Us
 	* ~~Link phone call buton to dialer~~
-	* ~~Link email button to compose mail~~
-7. Sponsors
-	* Update with actual sponsor logos
+	* ~~Link email button to compose mail~~	
 8. Facebook and Instagram
 	* ~~Link opens in a new in app browser window~~
 9. Feedback

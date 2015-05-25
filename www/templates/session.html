@@ -5,13 +5,13 @@
                 <h2>Chairperson</h2>
             </div>
             <div class="item item-body">
-                <img style = "float: left; padding-right: 10px;" ng-src="{{item.chairPic}}">
+                <img style = "float: left; padding-right: 10px;" src="{{item.chairPic}}">
                 <p>{{item.chair}}</p>
             </div>
             <div class="item tabs tabs-secondary tabs-icon-left">
-                <a ng-href ="mailto: {{item.email}}" class="tab-item">
-                    <i class="icon ion-email"></i>
-                    Contact
+                <a class="tab-item">
+                    <i class="icon ion-location"></i>
+                    {{item.location}}
                 </a>
             </div>
         </div>
@@ -23,10 +23,10 @@
                 <p>{{committee.description}}</p>
             </div>
             <div class="item tabs tabs-secondary tabs-icon-left">
-                <a class="tab-item">
+               <!--<a class="tab-item">
                     <i class="icon ion-location"></i>
                     {{item.location}}
-                </a>
+                </a>-->
                  <a onclick="window.open(encodeURI('{{commitee.bg}}'), '_blank', 'location=no');" class="tab-item">
                     <i class="icon ion-ios-book"></i>
                     View Background Guide
