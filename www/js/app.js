@@ -6,33 +6,71 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ionic.service.core', 'ionic.service.push'])
 
-.config(['$ionicAppProvider', function($ionicAppProvider) {
-  // Identify app
-  $ionicAppProvider.identify({
-    // Your App ID
-    app_id: 'bbb16289',
-    // The public API key services will use for this app
-    api_key: '0db913b237dcdae18095f22b4e628ab11ceb39e699b55994',
-    // Your GCM sender ID/project number (Uncomment if supporting Android)
-    gcm_id: '775496133916',
-    dev_push: true
-  });
+// .config(['$ionicAppProvider', function($ionicAppProvider) {
+//   // Identify app
+//   $ionicAppProvider.identify({
+//     // Your App ID
+//     app_id: 'bbb16289',
+//     // The public API key services will use for this app
+//     api_key: '0db913b237dcdae18095f22b4e628ab11ceb39e699b55994',
+//     // Your GCM sender ID/project number (Uncomment if supporting Android)
+//     gcm_id: '775496133916',
+//     dev_push: true
+//   });
 
-}])
+// }])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-  if (window.cordova && window.cordova.plugins.Keyboard) {
-    cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-  }
-  if (window.StatusBar) {
+if (window.cordova && window.cordova.plugins.Keyboard) {
+  cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+}
+if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
     window.open = cordova.InAppBrowser.open;
-  });
+
+    // Initialize push notifications!
+
+    // first, lets initialize parse. fill in your parse appId and clientKey
+    window.parsePlugin.initialize(IKlN89P9g0B6qw9lfAUeDo0h0ngfHuSbisblcH18, FrzH2EgKp4aqtfJpDwNOAAfYLYoDxo4cJ4TgCzID, function() {
+      console.log('Parse initialized successfully.');
+
+
+      window.parsePlugin.subscribe('AllDelChannel', function() {
+        console.log('Successfully subscribed to AllDelChannel.');
+
+
+        window.parsePlugin.getInstallationId(function(id) {
+            // update the view to show that we have the install ID
+            console.log('Retrieved install id: ' + id);
+
+              /**
+               * Now you can construct an object and save it to your own services, or Parse, and corrilate users to parse installations
+               * 
+               var install_data = {
+                  installation_id: id,
+                  channels: ['SampleChannel']
+               }
+               *
+               */
+
+             }, function(e) {
+              console.log('Failure to retrieve install id.');
+            });
+
+      }, function(e) {
+        console.log('Failed trying to subscribe to AllDelChannel.');
+      });
+
+    }, function(e) {
+      console.log('Failure to initialize Parse.');
+    });
+
+});
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -286,7 +324,7 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ioni
     var SUCCESS = alert("Success");
     var ERROR = alert("Error");
 
-     window.plugins.calendar.createEventInteractively(TITLE,LOCATION,NOTES,START,END,SUCCESS,ERROR);
+    window.plugins.calendar.createEventInteractively(TITLE,LOCATION,NOTES,START,END,SUCCESS,ERROR);
   }
 
   $scope.scanPoll = function() {
