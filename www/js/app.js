@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ionic.service.core', 'ionic.service.push'])
+angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ionic.service.core', 'ionic.service.push', 'starter.services'])
 
 .config(['$ionicAppProvider', function($ionicAppProvider) {
   // Identify app
@@ -24,14 +24,45 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ioni
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-  if (window.cordova && window.cordova.plugins.Keyboard) {
-    cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-  }
-  if (window.StatusBar) {
+    if (window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
     window.open = cordova.InAppBrowser.open;
+
+    // var user = $ionicUser.get();
+    // if(!user.user_id) {
+    //   // Set your user_id here, or generate a random one.
+    //   user.user_id = $ionicUser.generateGUID();
+    // };
+
+    // // Add some metadata to your user object.
+    // angular.extend(user, {
+    //   name: 'Ionitron',
+    //   bio: 'I come from planet Ion'
+    // });
+
+    // // Identify your user with the Ionic User Service
+    // $ionicUser.identify(user).then(function(){
+    //   $scope.identified = true;
+    //   alert('Identified user ' + user.name + '\n ID ' + user.user_id);
+    // });
+
+    // $ionicPush.register({
+    //   canShowAlert: true, //Can pushes show an alert on your screen?
+    //   canSetBadge: true, //Can pushes update app icon badges?
+    //   canPlaySound: true, //Can notifications play a sound?
+    //   canRunActionsOnWake: true, //Can run actions outside the app,
+    //   onNotification: function(notification) {
+    //     // Handle new push notifications here
+    //     // console.log(notification);
+    //     return true;
+    //   }
+    // });
+
   });
 })
 
@@ -223,7 +254,46 @@ angular.module('conference', ['ionic', 'ngCordova', 'starter.controllers', 'ioni
 
 
 
-.controller('confControl', function($scope,  $cordovaBarcodeScanner, $timeout, $cordovaContacts, $cordovaFileTransfer) {
+.controller('confControl', function($scope,  $cordovaBarcodeScanner, $timeout, $cordovaContacts, $cordovaPush, $cordovaFileTransfer, $rootScope, $ionicUser, $ionicPush) {
+
+    $scope.identifyUser = function() {
+    console.log('Ionic User: Identifying with Ionic User service');
+
+    var user = $ionicUser.get();
+    if(!user.user_id) {
+      // Set your user_id here, or generate a random one.
+      user.user_id = $ionicUser.generateGUID();
+    };
+
+    // Add some metadata to your user object.
+    angular.extend(user, {
+      name: 'Ionitron',
+      bio: 'I come from planet Ion'
+    });
+
+    // Identify your user with the Ionic User Service
+    $ionicUser.identify(user).then(function(){
+      $scope.identified = true;
+      alert('Identified user ' + user.name + '\n ID ' + user.user_id);
+    });
+  };
+  $scope.pushRegister = function() {
+    console.log('Ionic Push: Registering user');
+
+    // Register with the Ionic Push service.  All parameters are optional.
+    $ionicPush.register({
+      canShowAlert: true, //Can pushes show an alert on your screen?
+      canSetBadge: true, //Can pushes update app icon badges?
+      canPlaySound: true, //Can notifications play a sound?
+      canRunActionsOnWake: true, //Can run actions outside the app,
+      onNotification: function(notification) {
+        // Handle new push notifications here
+        // console.log(notification);
+        return true;
+      }
+    });
+  };
+
   var NAME = "";
   var PHONE = "";
   var EMAIL = "";

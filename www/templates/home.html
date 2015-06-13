@@ -65,6 +65,13 @@
    </div> -->
    <div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
   <img src='img/splash2.jpg' style='width:100%;height:100%' alt='[]' />
+  <button class="button button-block button-dark" ng-click="identifyUser()">
+  Identify a user
+</button>
+  <button class="button button-block button-positive" ng-if="identified" ng-click="pushRegister()">
+  Register for Push
+</button>
+
 </div>
 
   </ion-content>
