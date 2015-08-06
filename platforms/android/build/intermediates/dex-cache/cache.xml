@@ -30,6 +30,13 @@
         <dex dex="C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\android-support-v13-2a213151bcca22ba7c61b17f325eb0b7474fc659.jar" />
     </item>
     <item
+        jar="C:\Users\Dhruv\conference\platforms\android\libs\Pushwoosh.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2185c2cc4ff389346620ca5bd0f4448cc667b975">
+        <dex dex="C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\Pushwoosh-85500e3866dd71ce37ecb9a0ed7d1d6f494de33d.jar" />
+    </item>
+    <item
         jar="C:\Users\Dhruv\conference\platforms\android\libs\Parse-1.3.8.jar"
         jumboMode="false"
         revision="21.1.2"
