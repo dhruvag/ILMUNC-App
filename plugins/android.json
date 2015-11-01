@@ -33,10 +33,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         },
@@ -93,18 +89,6 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 2
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.READ_CONTACTS\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
-                            "count": 1
                         }
                     ]
                 }
@@ -610,9 +594,6 @@
             "PACKAGE_NAME": "com.ionicframework.conference926829"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.conference926829"
-        },
-        "org.apache.cordova.contacts": {
             "PACKAGE_NAME": "com.ionicframework.conference926829"
         },
         "org.apache.cordova.inappbrowser": {
