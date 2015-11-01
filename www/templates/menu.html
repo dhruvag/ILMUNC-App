@@ -12,7 +12,7 @@
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left" class="dark-bg">
+  <ion-side-menu side="left" style="background: #6b1418" class="dark-bg">
     <ion-header-bar class="bar-dark">
     <img style="margin-left: 35px; margin-right: 35px" height = "38px" width = "180px"src="img/india-header-white.png" />
     </ion-header-bar>
@@ -22,16 +22,12 @@
          <i class="icon ion-ios-home"></i>
           Home
         </ion-item>
-        <!-- <ion-item menu-close ng-click="login()" class="item-icon-left">
-         <i class="icon ion-unlocked"></i>
-          Login
-        </ion-item> -->
          <ion-item menu-close href="#/app/schedule" class="item-icon-left">
-          <i class="icon ion-calendar"></i>
-          Conference Schedule
+          <i class="icon ion-ios-calendar-outline"></i>
+          Schedule
         </ion-item>
         <ion-item menu-close href="#/app/sessions" class="item-icon-left">
-         <i class="icon ion-ios-people"></i>
+         <i class="icon ion-speakerphone"></i>
           Committees
         </ion-item>
         <ion-item menu-close href="#/app/map" class="item-icon-left">
@@ -44,23 +40,27 @@
         </ion-item>
         <ion-item menu-close href="#/app/meet" class="item-icon-left">
          <i class="icon ion-person-add"></i>
-          People I've Met
+          My ILMUNC Contacts
         </ion-item>
         <ion-item menu-close href="#/app/contact" class="item-icon-left">
-         <i class="icon ion-ios-telephone"></i>
-          Contact Us
+         <i class="icon ion-ios-people"></i>
+          Meet the Team
         </ion-item>
         <ion-item menu-close href="#/app/sponsors" class="item-icon-left">
-         <i class="icon ion-social-usd"></i>
-          Sponsors
+         <i class="icon ion-ios-star"></i>
+          Partners & Speakers
         </ion-item>
-        <ion-item menu-close href="#" class="item-icon-left" onclick="window.open(encodeURI('http://www.facebook.com/ilmuncindia'), '_blank', 'location=yes', 'toolbar=yes');">
+        <!-- <ion-item menu-close href="#" class="item-icon-left" onclick="window.open(encodeURI('http://www.facebook.com/ilmuncindia'), '_blank', 'location=yes', 'toolbar=yes');">
          <i class="icon ion-social-facebook"></i>
           Facebook
         </ion-item>
         <ion-item menu-close href="#" class="item-icon-left" onclick="window.open(encodeURI('http://www.instagram.com/ilmuncindia'), '_blank', 'location=yes', 'toolbar=yes');">
          <i class="icon ion-social-instagram"></i>
           Instagram
+        </ion-item> -->
+        <ion-item menu-close href="#/app/connect" class="item-icon-left">
+         <i class="icon ion-android-share-alt"></i>
+          Connect
         </ion-item>
         <ion-item menu-close href="#/app/feedback" class="item-icon-left">
          <i class="icon ion-help"></i>
