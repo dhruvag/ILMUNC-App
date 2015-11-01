@@ -26,15 +26,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "org.transistorsoft.cordova.background-geolocation": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/christocracy/cordova-plugin-background-geolocation.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-geolocation": {
         "source": {
             "type": "registry",
