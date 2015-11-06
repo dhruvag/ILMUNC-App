@@ -66,6 +66,13 @@ module.exports = [
         "id": "nl.x-services.plugins.calendar.tests"
     },
     {
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "id": "phonegap-plugin-push.PushNotification",
+        "clobbers": [
+            "PushNotification"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "id": "cordova-plugin-file.DirectoryEntry",
         "clobbers": [
@@ -224,6 +231,7 @@ module.exports.metadata =
     "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.splashscreen": "1.0.0",
     "nl.x-services.plugins.calendar": "4.3.5",
+    "phonegap-plugin-push": "1.4.2",
     "cordova-plugin-file": "2.0.0"
 }
 // BOTTOM OF METADATA

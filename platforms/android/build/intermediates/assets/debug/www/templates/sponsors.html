@@ -1,40 +1,44 @@
-<ion-view view-title="Sponsors">
+<ion-view view-title="Partners and Speakers">
   <ion-content class="has-header">
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg .tg-031e{font-family: Helvetica, sans-serif; padding-bottom: 35px; padding-right: 35px; padding-left: 35px; padding-top: 35px; vertical-align: middle; text-align: center;}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-031e"><h3>Platinum</h3></th>
-    <th class="tg-031e">
-    	<img src="img/ana.jpg" />
-    </th>
-  </tr>
-  <tr>
-    <td class="tg-031e"><h3>Gold</h3></td>
-    <td class="tg-031e">
-    	<img src="img/dhruv.jpg" />
-    	<img src="img/dhruv.jpg" />
-    </td>
-  </tr>
-  <tr>
-    <td class="tg-031e"><h3>Silver</h3></td>
-    <td class="tg-031e">
-		<img src="img/jyothi.jpg" />
-    	<img src="img/jyothi.jpg" />
-    	<img src="img/jyothi.jpg" />
-    </td>
-  </tr>
-  <tr>
-    <td class="tg-031e"><h3>Bronze</h3></td>
-    <td class="tg-031e">
-		<img src="img/hannah.jpg" />
-		<img src="img/hannah.jpg" />
-		<img src="img/hannah.jpg" />
-		<img src="img/hannah.jpg" />
-    </td>
-  </tr>
-</table>
+     <!--  <ion-list>
+        <div ng-repeat="partner in partners">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(partner)"
+                    ng-class="{active: isGroupShown(partner)}">
+              <i class="icon" ng-class="isGroupShown(partner) ? 'ion-minus' : 'ion-chevron-down' "></i>
+            &nbsp;
+            {{partner.name}}
+          </ion-item>
+          <ion-item class="item-accordion item-avatar item-icon-right"
+                    ng-repeat="item in partner.items"
+                    ng-show="isGroupShown(partner)"
+                    href="#/app/{{item.page}}">
+            <img ng-src="{{item.comPic}}">
+            {{item.name}}<i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+        </div>
+      </ion-list> -->
+      <section class="content">
+    <div class="row">
+      <div class="main large-8 column text-justify">
+        <h3 style="color: #fff"> Lead Partner </h3>
+
+        <div class="tier1" style="width: 100px; margin: 0 auto;">
+          <a href="#"><img width="100px" src="img/ivy_central.jpg"></a>
+        </div>
+        <h3 style="color: #fff">College Fair Partners</h3>
+        <div class="tier2" style="width: 100%; margin: 0 auto;">
+          <a href="#"><img width="100px" src="img/nyu.jpg"></a>
+        </div>
+        <h3 style="color: #fff">Speakers</h3>
+        <div class="tier3"  style="width: 100% ; margin: 0 auto;">
+          <a href="#"><img width="100px" src="img/caroline.jpeg"></a>
+          <a href="#"><img width="100px" src="img/piyush.jpg"></a>
+          <a href="#"><img width="100px" src="img/meera.jpeg"></a>
+          <a href="#"><img width="100px" src="img/binalakshmi.jpg"></a>
+          <a href="#"><img width="100px" src="img/gurcharan.jpg"></a>
+        </div>
+
+      </div>
   </ion-content>
 </ion-view>

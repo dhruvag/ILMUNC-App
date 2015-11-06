@@ -22,13 +22,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.transistorsoft.cordova.background-geolocation/www/BackgroundGeoLocation.js",
-        "id": "org.transistorsoft.cordova.background-geolocation.BackgroundGeoLocation",
-        "clobbers": [
-            "plugins.backgroundGeoLocation"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
         "id": "cordova-plugin-file-transfer.FileTransferError",
         "clobbers": [
@@ -46,69 +39,6 @@ module.exports = [
         "file": "plugins/cordova-plugin-whitelist/whitelist.js",
         "id": "cordova-plugin-whitelist.whitelist",
         "runs": true
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/contacts.js",
-        "id": "org.apache.cordova.contacts.contacts",
-        "clobbers": [
-            "navigator.contacts"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/Contact.js",
-        "id": "org.apache.cordova.contacts.Contact",
-        "clobbers": [
-            "Contact"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/ContactAddress.js",
-        "id": "org.apache.cordova.contacts.ContactAddress",
-        "clobbers": [
-            "ContactAddress"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/ContactError.js",
-        "id": "org.apache.cordova.contacts.ContactError",
-        "clobbers": [
-            "ContactError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/ContactField.js",
-        "id": "org.apache.cordova.contacts.ContactField",
-        "clobbers": [
-            "ContactField"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/ContactFindOptions.js",
-        "id": "org.apache.cordova.contacts.ContactFindOptions",
-        "clobbers": [
-            "ContactFindOptions"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/ContactName.js",
-        "id": "org.apache.cordova.contacts.ContactName",
-        "clobbers": [
-            "ContactName"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/ContactOrganization.js",
-        "id": "org.apache.cordova.contacts.ContactOrganization",
-        "clobbers": [
-            "ContactOrganization"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.contacts/www/ContactFieldType.js",
-        "id": "org.apache.cordova.contacts.ContactFieldType",
-        "merges": [
-            ""
-        ]
     },
     {
         "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
@@ -136,17 +66,10 @@ module.exports = [
         "id": "nl.x-services.plugins.calendar.tests"
     },
     {
-        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-        "id": "cordova-plugin-dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-        "id": "cordova-plugin-dialogs.notification_android",
-        "merges": [
-            "navigator.notification"
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "id": "phonegap-plugin-push.PushNotification",
+        "clobbers": [
+            "PushNotification"
         ]
     },
     {
@@ -303,15 +226,12 @@ module.exports.metadata =
     "org.apache.cordova.console": "0.2.13",
     "org.apache.cordova.device": "0.3.0",
     "com.phonegap.plugins.barcodescanner": "2.2.0",
-    "org.transistorsoft.cordova.background-geolocation": "0.3.6",
     "cordova-plugin-file-transfer": "1.1.0",
     "cordova-plugin-whitelist": "1.0.0",
-    "org.apache.cordova.contacts": "0.2.16",
     "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.splashscreen": "1.0.0",
     "nl.x-services.plugins.calendar": "4.3.5",
-    "cordova-plugin-geolocation": "1.0.0",
-    "cordova-plugin-dialogs": "1.1.0",
+    "phonegap-plugin-push": "1.4.2",
     "cordova-plugin-file": "2.0.0"
 }
 // BOTTOM OF METADATA
