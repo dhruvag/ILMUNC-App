@@ -349,10 +349,10 @@ angular.module('conference', ['ionic','ionic.service.core', 'ngCordova', 'starte
      //Santosh Vallabhaneni~1234567890~sec-gen@ilmunc-india.com~Reconstructing Russia~United States of America
      var split = imageData.text.split('~');
      NAME = split[0];
-     PHONE = parseInt(split[1]);
-     EMAIL = split[2];
-     COMMITTEE = split[3];
-     COUNTRY = split[4];
+     PHONE = parseInt(split[2]);
+     EMAIL = split[1];
+     COMMITTEE = split[4];
+     COUNTRY = split[3];
      if (NAME == "") {alert('Didn\'t quite get that! Please try again');}
      if (NAME != "") {$scope.doRefresh();}
    }, function(error) {
@@ -435,11 +435,12 @@ $scope.groups[2] = {
   { name: 'Hannah White', title: "Under Secretary-General Administration", phone: 1234567890, email: "admin@ilmunc-india.com", image: "img/hannah.jpg" },
   ];
 
-  // $scope.peeps = [
-  // {name: 'Dhruv Agarwal', phone: 2679128714, email: 'usg-ops@ilmunc-india.com', country: 'Djibouti', committee: 'SPECPOL'},
-  // ];
+  $scope.peeps = [];
 
 })
 
 
 
+//SELECT CONCAT(delegate.del_firstname, " ", delegate.del_lastname), delegate.del_email, delegate.del_phone, country.country_name, committee.committee_name FROM delegate LEFT JOIN committee ON delegate.committee_id = committee.committee_id LEFT JOIN country ON delegate.country_id = country.country_id
+
+//SELECT CONCAT(individual.ind_firstname, " ", individual.ind_lastname), individual.ind_email, individual.ind_phone, country.country_name FROM individual LEFT JOIN school_country ON school_country.school_id = individual.school_id LEFT JOIN country ON school_country.country_id = country.country_id

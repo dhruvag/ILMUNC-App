@@ -330,6 +330,18 @@ uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
 ADDED from AndroidManifest.xml:90:5
 	android:name
 		ADDED from AndroidManifest.xml:90:22
+uses-permission#android.permission.READ_CONTACTS
+ADDED from AndroidManifest.xml:91:5
+	android:name
+		ADDED from AndroidManifest.xml:91:22
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from AndroidManifest.xml:92:5
+	android:name
+		ADDED from AndroidManifest.xml:92:22
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from AndroidManifest.xml:93:5
+	android:name
+		ADDED from AndroidManifest.xml:93:22
 meta-data#com.google.android.gms.version
 ADDED from com.google.android.gms:play-services-basement:8.3.0:21:9
 MERGED from com.google.android.gms:play-services-basement:8.3.0:21:9
