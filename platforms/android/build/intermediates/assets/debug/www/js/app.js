@@ -388,7 +388,7 @@ $scope.groups[0] = {
 $scope.groups[1] = {
   name: committees[1],
   items: [
-  {page: 'unhrc', name: 'Historical UN Commission on Human Rights', chair: 'Madeline Su', chairPic: 'img/rahima.jpg', email: 'unhrc@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Caravan of Death (Pinochet’s Chile) and Topic B: Khmer Rouge', bg: 'http://ilmunc-india.com/assets/bg/unodc.pdf', dbg: 'http://unodc.ilmunc-india.com'},
+  {page: 'unhrc', name: 'Historical UN Commission on Human Rights', chair: 'Madeline Su', chairPic: 'img/madeline.jpg', email: 'unhrc@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Caravan of Death (Pinochet’s Chile) and Topic B: Khmer Rouge', bg: 'http://ilmunc-india.com/assets/bg/unodc.pdf', dbg: 'http://unodc.ilmunc-india.com'},
   {page: 'unodc', name: 'United Nations Office of Drug Control', chair: 'Ahmed Kamil', chairPic: 'img/ahmed.jpg', email: 'unodc@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Drug Cartels and Topic B: Police Response to Violence', bg: 'http://ilmunc-india.com/assets/bg/UNHRC.pdf', dbg: 'http://unhrc.ilmunc-india.com'}
   ]
 };
@@ -398,7 +398,7 @@ $scope.groups[2] = {
   items: [
   {page: 'constellis', name: 'Constellis & Syrian Government', chair: 'Kent Hutchinson', chairPic: 'img/kent.jpg', email: 'constellis@ilmunc-india.com', location: 'Cohen Hall', description: 'Crisis Committee. Information released within committee.', bg: 'http://ilmunc-india.com/assets/bg/constellis.pdf', dbg: 'http://constellis.ilmunc-india.com'},
   {page: 'security', name: 'Security Council', chair: 'Dhrupad Bharadwaj', chairPic: 'img/dhrupad.jpg', email: 'unsc@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Limiting Military Intervention in sensitive Geo-Political Countries and Topic B: Reforms of the United Nations Security Council', bg: 'http://ilmunc-india.com/assets/bg/security.pdf', dbg: 'http://securitycouncil.ilmunc-india.com'},
-  {page: 'russia', name: 'Reconstructing Russia', chair: 'Janice Chung', chairPic: 'img/alex.jpg', email: 'reconrussia@ilmunc-india.com', location: 'Cohen Hall', description: 'Crisis Committee. Information released within committee.', bg: 'http://ilmunc-india.com/assets/bg/russia.pdf', dbg: 'http://russia.ilmunc-india.com'}
+  {page: 'russia', name: 'Reconstructing Russia', chair: 'Janice Chung', chairPic: 'img/janice.jpg', email: 'reconrussia@ilmunc-india.com', location: 'Cohen Hall', description: 'Crisis Committee. Information released within committee.', bg: 'http://ilmunc-india.com/assets/bg/russia.pdf', dbg: 'http://russia.ilmunc-india.com'}
   ]
 }; 
 
@@ -430,7 +430,7 @@ $scope.groups[2] = {
   { name: 'Santosh Vallabhaneni', title: "Secretary-General", phone: 1234567890, email: "sec-gen@ilmunc-india.com", image: "img/sunny.jpg" },
   { name: 'Jyothi Vallurupalli', title: "Director-General", phone: 1234567890, email: "dir-gen@ilmunc-india.com", image: "img/jyothi.jpg" },
   { name: 'Ana Rancic', title: "Chief of Staff", phone: 1234567890, email: "staff@ilmunc-india.com", image: "img/ana.jpg" },
-  { name: 'Elise Pi', title: "Chief of Operations", phone: 1234567890, email: "operations@ilmunc-india.com", image: "img/elise.jpg" },
+  { name: 'Elise Pi', title: "Chief of Operations", phone: 1234567890, email: "operations@ilmunc-india.com", image: "img/elise2.jpg" },
   { name: 'Dhruv Agarwal', title: "Under Secretary-General Operations", phone: 1234567890, email: "usg-ops@ilmunc-india.com", image: "img/dhruv.jpg" },
   { name: 'Hannah White', title: "Under Secretary-General Administration", phone: 1234567890, email: "admin@ilmunc-india.com", image: "img/hannah.jpg" },
   ];
