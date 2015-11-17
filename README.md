@@ -9,7 +9,7 @@ The app is written in Javascript using the Ionic framework.
 0. Home
 	* ~~Fix splash screen~~ 
 	* ~~Connect Facebook and Instagram links~~
-	* Add push notifications
+	* ~~Add push notifications~~
 1. Conference Schedule
 	* ~~Create views for all days~~
 	* ~~Link views with the tabbed navigation~~
@@ -17,7 +17,7 @@ The app is written in Javascript using the Ionic framework.
 	* ~~Add images for each of the committees~~
 	* ~~Populate committee information~~
 	* ~~Link 'Contact' button to send email~~
-	* Link 'Background Guide' to pdf
+	* ~~Link 'Background Guide' to pdf~~
 3. Maps
 	* ~~Embed Google Map for 'Around the Hotel' view~~
 4. Preparation Guide

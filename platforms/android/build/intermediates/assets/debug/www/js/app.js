@@ -268,56 +268,56 @@ angular.module('conference', ['ionic','ionic.service.core', 'ngCordova', 'starte
 
   $scope.thursday = function() {
     $scope.tasks = [];
-    $scope.tasks.push({ title: 'On Site Registration', description: "This is gonna be awesome", time: "9.30am - 12.00pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'University Panel', description: "This is gonna be great", time: "12.00pm - 1.00pm", location: "Wynn Commons"});
-    $scope.tasks.push({ title: 'Lunch', description: "This is gonna be lovely", time: "1.00pm - 2.00pm", location: "Houston Hall"});
-    $scope.tasks.push({ title: 'Opening Ceremony', description: "This is gonna be fantastic", time: "3.00pm - 4.00pm", location: "Cohen Hall"});
-    $scope.tasks.push({ title: 'Opening Ceremony', description: "This is gonna be fantastic", time: "4.00pm - 4.30pm", location: "Cohen Hall"});
-    $scope.tasks.push({ title: 'Tea Break', description: "This is gonna be fantastic", time: "4.30pm - 5.00pm", location: "Cohen Hall"});
-    $scope.tasks.push({ title: 'Committee Session I', description: "This is gonna be fantastic", time: "5.00pm - 7.30pm", location: "Cohen Hall"});
-    $scope.tasks.push({ title: 'Dinner', description: "This is gonna be fantastic", time: "8.00pm - 9.00pm", location: "Cohen Hall"});
-    $scope.tasks.push({ title: 'Socials', description: "This is gonna be fantastic", time: "9.00pm - 11.00pm", location: "Cohen Hall"});
+    $scope.tasks.push({ title: 'On Site Registration',time: "9.30am - 12.00pm"});
+    $scope.tasks.push({ title: 'University Panel', time: "12.00pm - 1.00pm", location: "Sapphire"});
+    $scope.tasks.push({ title: 'Lunch', time: "1.00pm - 2.00pm"});
+    $scope.tasks.push({ title: 'Opening Ceremony', time: "3.00pm - 4.00pm", location: "Sapphire"});
+    $scope.tasks.push({ title: 'GA and Crisis Training', time: "4.00pm - 4.30pm", location: "Sapphire"});
+    $scope.tasks.push({ title: 'Tea Break', time: "4.30pm - 5.00pm"});
+    $scope.tasks.push({ title: 'Committee Session I', time: "5.00pm - 7.30pm", location: "All Conference Rooms"});
+    $scope.tasks.push({ title: 'Dinner', time: "8.00pm - 9.00pm"});
+    $scope.tasks.push({ title: 'Socials', time: "9.00pm - 11.00pm", location: "Sapphire"});
 
   };
 
   $scope.friday = function() {
     $scope.tasks = [];
-    $scope.tasks.push({ title: 'Breakfast (Round Table with Caroline)', description: "This is gonna be awesome", time: "8.00am - 9.00am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Speaker Session', description: "This is gonna be awesome", time: "9.00am - 9.30am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Committee Session II', description: "This is gonna be awesome", time: "9.30am - 11.00am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Tea Break', description: "This is gonna be awesome", time: "11.00am - 11.30am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Committee Session III', description: "This is gonna be awesome", time: "11.30pm - 1.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Lunch', description: "This is gonna be awesome", time: "1.30pm - 2.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Committee Session IV', description: "This is gonna be awesome", time: "2.30pm - 4.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Tea Break', description: "This is gonna be awesome", time: "4.30pm - 5.00pm", loction: "College Hall"});
-    $scope.tasks.push({ title: 'Career Workshop with Caroline Linger', description: "This is gonna be awesome", time: "5.00pm - 6.00pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Speaker Session', description: "This is gonna be awesome", time: "6.00pm - 7.00pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Dinner', description: "This is gonna be awesome", time: "7.30pm - 8.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Socials', description: "This is gonna be awesome", time: "8.30pm - 10.30pm", location: "College Hall"});
+    $scope.tasks.push({ title: 'Breakfast (Round Table with Caroline)',time: "8.00am - 9.00am"});
+    $scope.tasks.push({ title: 'Speaker Session',time: "9.00am - 9.30am", location: "Sapphire"});
+    $scope.tasks.push({ title: 'Committee Session II',time: "9.30am - 11.00am", location: "All Conference Rooms"});
+    $scope.tasks.push({ title: 'Tea Break',time: "11.00am - 11.30am"});
+    $scope.tasks.push({ title: 'Committee Session III',time: "11.30pm - 1.30pm", location: "All Conference Rooms"});
+    $scope.tasks.push({ title: 'Lunch',time: "1.30pm - 2.30pm"});
+    $scope.tasks.push({ title: 'Committee Session IV',time: "2.30pm - 4.30pm", location: "All Conference Rooms"});
+    $scope.tasks.push({ title: 'Tea Break',time: "4.30pm - 5.00pm"});
+    $scope.tasks.push({ title: 'Career Workshop with Caroline Linger',time: "5.00pm - 6.00pm", location: "Sapphire"});
+    $scope.tasks.push({ title: 'Speaker Session',time: "6.00pm - 7.00pm", location: "Sapphire"});
+    $scope.tasks.push({ title: 'Dinner',time: "7.30pm - 8.30pm"});
+    $scope.tasks.push({ title: 'Socials',time: "8.30pm - 10.30pm", location: "Sapphire"});
   };
 
   $scope.saturday = function() {
     $scope.tasks = [];
-    $scope.tasks.push({ title: 'Breakfast (Round Table with Caroline)', description: "This is gonna be awesome", time: "8.00am - 9.00am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Committee Session V', description: "This is gonna be awesome", time: "9.00am - 11.00am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Tea Break', description: "This is gonna be awesome", time: "11.00am - 11.30am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Committee Session VI', description: "This is gonna be awesome", time: "11.30pm - 1.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Lunch', description: "This is gonna be awesome", time: "1.30pm - 2.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'College Fair', description: "This is gonna be awesome", time: "2.30pm - 3.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Committee Session VII', description: "This is gonna be awesome", time: "3.30pm - 5.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Tea Break', description: "This is gonna be awesome", time: "5.30pm - 6.00pm", loction: "College Hall"});
-    $scope.tasks.push({ title: 'Speaker Session', description: "This is gonna be awesome", time: "6.00pm - 7.00pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Dinner', description: "This is gonna be awesome", time: "7.30pm - 8.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Socials', description: "This is gonna be awesome", time: "8.30pm - 11.00pm", location: "College Hall"});
+    $scope.tasks.push({ title: 'Breakfast (Round Table with Caroline)',time: "8.00am - 9.00am"});
+    $scope.tasks.push({ title: 'Committee Session V',time: "9.00am - 11.00am", location: "All Conference Rooms"});
+    $scope.tasks.push({ title: 'Tea Break',time: "11.00am - 11.30am"});
+    $scope.tasks.push({ title: 'Committee Session VI',time: "11.30pm - 1.30pm", location: "All Conference Rooms"});
+    $scope.tasks.push({ title: 'Lunch',time: "1.30pm - 2.30pm"});
+    $scope.tasks.push({ title: 'College Fair',time: "2.30pm - 3.30pm", location: "Sapphire"});
+    $scope.tasks.push({ title: 'Committee Session VII',time: "3.30pm - 5.30pm", location: "All Conference Rooms"});
+    $scope.tasks.push({ title: 'Tea Break',time: "5.30pm - 6.00pm"});
+    $scope.tasks.push({ title: 'Speaker Session',time: "6.00pm - 7.00pm", location: "Sapphire"});
+    $scope.tasks.push({ title: 'Dinner',time: "7.30pm - 8.30pm"});
+    $scope.tasks.push({ title: 'Socials',time: "8.30pm - 11.00pm", location: "Sapphire"});
   };
 
   $scope.sunday = function() {
     $scope.tasks = [];
-    $scope.tasks.push({ title: 'Breakfast (Round Table with Caroline)', description: "This is gonna be awesome", time: "8.00am - 9.00am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Committee Session 8', description: "This is gonna be awesome", time: "9.00pm - 11.00am", location: "College Hall"});
-    $scope.tasks.push({ title: 'Tea Break', description: "This is gonna be awesome", time: "11.00am - 12.00pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Closing Ceremony', description: "This is gonna be awesome", time: "12.00pm - 1.30pm", location: "College Hall"});
-    $scope.tasks.push({ title: 'Lunch', description: "This is gonna be awesome", time: "1.30pm - 2.30pm", location: "College Hall"});
+    $scope.tasks.push({ title: 'Breakfast (Round Table with Caroline)',time: "8.00am - 9.00am"});
+    $scope.tasks.push({ title: 'Committee Session 8',time: "9.00pm - 11.00am", location: "All Conference Rooms"});
+    $scope.tasks.push({ title: 'Tea Break',time: "11.00am - 12.00pm"});
+    $scope.tasks.push({ title: 'Closing Ceremony',time: "12.00pm - 1.30pm", location: "Sapphire"});
+    $scope.tasks.push({ title: 'Lunch',time: "1.30pm - 2.30pm"});
   };
 
   $scope.scanPoll = function() {
@@ -379,26 +379,26 @@ var committees = ['General Assembly', 'Specialized Committees', 'Crisis Committe
 $scope.groups[0] = {
   name: committees[0],
   items: [
-  {page: 'disec', name: 'Disarmament and International Security', description: "Topic A: Fourth Generation Warfare in the Middle East and Topic B: Emerging Technologies\' Impact on Arms Trade", chair: 'Roy Lan', chairPic: 'img/roy.jpg', email: 'disec@ilmunc-india.com', location: 'Cohen Hall', bg: 'http://ilmunc-india.com/assets/bg/disec.pdf', dbg: 'http://disec.ilmunc-india.com'},
-  {page: 'specpol', name: 'Special Political and Decolonization Committee', chair: 'Kavya Bodapati', chairPic: 'img/kavya.jpg', email: 'specpol@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Territorial Integrity of the Former Soviet Republics and Topic B: Maritime Dispute',  bg: 'http://ilmunc-india.com/assets/bg/specpol.pdf', dbg: 'http://specpol.ilmunc-india.com'},
-  {page: 'legal', name: 'Legal', chair: 'Elise Pi', chairPic: 'img/elise.jpg', email: 'legal@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Diplomatic and Consular Mission Security and Topic B: War Ethics of Drones', bg: 'http://ilmunc-india.com/assets/bg/legal.pdf', dbg: 'http://legal.ilmunc-india.com'}
+  {page: 'disec', name: 'Disarmament and International Security', description: "Topic A: Fourth Generation Warfare in the Middle East and Topic B: Emerging Technologies\' Impact on Arms Trade", chair: 'Roy Lan', chairPic: 'img/roy.jpg', email: 'disec@ilmunc-india.com', location: 'Sapphire', bg: 'http://ilmunc-india.com/assets/bg/disec.pdf', dbg: 'http://disec.ilmunc-india.com'},
+  {page: 'specpol', name: 'Special Political and Decolonization Committee', chair: 'Kavya Bodapati', chairPic: 'img/kavya.jpg', email: 'specpol@ilmunc-india.com', location: 'Jade / Turquoise', description: 'Topic A: Territorial Integrity of the Former Soviet Republics and Topic B: Maritime Dispute',  bg: 'http://ilmunc-india.com/assets/bg/specpol.pdf', dbg: 'http://specpol.ilmunc-india.com'},
+  {page: 'legal', name: 'Legal', chair: 'Elise Pi', chairPic: 'img/elise.jpg', email: 'legal@ilmunc-india.com', location: 'Ruby / Coral', description: 'Topic A: Diplomatic and Consular Mission Security and Topic B: War Ethics of Drones', bg: 'http://ilmunc-india.com/assets/bg/legal.pdf', dbg: 'http://legal.ilmunc-india.com'}
   ]
 };
 
 $scope.groups[1] = {
   name: committees[1],
   items: [
-  {page: 'unhrc', name: 'Historical UN Commission on Human Rights', chair: 'Madeline Su', chairPic: 'img/madeline.jpg', email: 'unhrc@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Caravan of Death (Pinochet’s Chile) and Topic B: Khmer Rouge', bg: 'http://ilmunc-india.com/assets/bg/unodc.pdf', dbg: 'http://unodc.ilmunc-india.com'},
-  {page: 'unodc', name: 'United Nations Office of Drug Control', chair: 'Ahmed Kamil', chairPic: 'img/ahmed.jpg', email: 'unodc@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Drug Cartels and Topic B: Police Response to Violence', bg: 'http://ilmunc-india.com/assets/bg/UNHRC.pdf', dbg: 'http://unhrc.ilmunc-india.com'}
+  {page: 'unhrc', name: 'Historical UN Commission on Human Rights', chair: 'Madeline Su', chairPic: 'img/madeline.jpg', email: 'unhrc@ilmunc-india.com', location: 'King Nicholas', description: 'Topic A: Caravan of Death (Pinochet’s Chile) and Topic B: Khmer Rouge', bg: 'http://ilmunc-india.com/assets/bg/unodc.pdf', dbg: 'http://unodc.ilmunc-india.com'},
+  {page: 'unodc', name: 'United Nations Office of Drug Control', chair: 'Ahmed Kamil', chairPic: 'img/ahmed.jpg', email: 'unodc@ilmunc-india.com', location: 'King George', description: 'Topic A: Drug Cartels and Topic B: Police Response to Violence', bg: 'http://ilmunc-india.com/assets/bg/UNHRC.pdf', dbg: 'http://unhrc.ilmunc-india.com'}
   ]
 };
 
 $scope.groups[2] = {
   name: committees[2],
   items: [
-  {page: 'constellis', name: 'Constellis & Syrian Government', chair: 'Kent Hutchinson', chairPic: 'img/kent.jpg', email: 'constellis@ilmunc-india.com', location: 'Cohen Hall', description: 'Crisis Committee. Information released within committee.', bg: 'http://ilmunc-india.com/assets/bg/constellis.pdf', dbg: 'http://constellis.ilmunc-india.com'},
-  {page: 'security', name: 'Security Council', chair: 'Dhrupad Bharadwaj', chairPic: 'img/dhrupad.jpg', email: 'unsc@ilmunc-india.com', location: 'Cohen Hall', description: 'Topic A: Limiting Military Intervention in sensitive Geo-Political Countries and Topic B: Reforms of the United Nations Security Council', bg: 'http://ilmunc-india.com/assets/bg/security.pdf', dbg: 'http://securitycouncil.ilmunc-india.com'},
-  {page: 'russia', name: 'Reconstructing Russia', chair: 'Janice Chung', chairPic: 'img/janice.jpg', email: 'reconrussia@ilmunc-india.com', location: 'Cohen Hall', description: 'Crisis Committee. Information released within committee.', bg: 'http://ilmunc-india.com/assets/bg/russia.pdf', dbg: 'http://russia.ilmunc-india.com'}
+  {page: 'constellis', name: 'Constellis & Syrian Government', chair: 'Kent Hutchinson', chairPic: 'img/kent.jpg', email: 'constellis@ilmunc-india.com', location: 'Osman Bay', description: 'Crisis Committee. Information released within committee.', bg: 'http://ilmunc-india.com/assets/bg/constellis.pdf', dbg: 'http://constellis.ilmunc-india.com'},
+  {page: 'security', name: 'Security Council', chair: 'Dhrupad Bharadwaj', chairPic: 'img/dhrupad.jpg', email: 'unsc@ilmunc-india.com', location: 'VIP 3', description: 'Topic A: Limiting Military Intervention in sensitive Geo-Political Countries and Topic B: Reforms of the United Nations Security Council', bg: 'http://ilmunc-india.com/assets/bg/security.pdf', dbg: 'http://securitycouncil.ilmunc-india.com'},
+  {page: 'russia', name: 'Reconstructing Russia', chair: 'Janice Chung', chairPic: 'img/janice.jpg', email: 'reconrussia@ilmunc-india.com', location: 'VIP 1', description: 'Crisis Committee. Information released within committee.', bg: 'http://ilmunc-india.com/assets/bg/russia.pdf', dbg: 'http://russia.ilmunc-india.com'}
   ]
 }; 
 
@@ -418,12 +418,15 @@ $scope.groups[2] = {
   };
 
   $scope.tasks = [
-  { title: 'Conference Registration', description: "This is gonna be awesome", time: "12.00pm - 6.00pm", location: "College Hall", color: "#739536" },
-  { title: 'Hotel Check-in and Registration', description: "This is gonna be great", time: "2.00pm - 6.00pm", location: "Wynn Commons"},
-  { title: 'Pre-Conference Training and Workshops', description: "This is gonna be lovely", time: "4.00pmm - 5.30pm", location: "Houston Hall"},
-  { title: 'Opening Ceremonies', description: "This is gonna be fantastic", time: "7.00pm - 8.00pm", location: "Cohen Hall"},
-  { title: 'Committee Session I', description: "This is gonna be fantastic", time: "8.30pm - 11.30pm", location: "Cohen Hall"},
-  { title: 'Faculty Advisor Reception', description: "This is gonna be fantastic", time: "9.30pm - 10.30pm", location: "Cohen Hall"}
+  { title: 'On Site Registration',time: "9.30am - 12.00pm"},
+  { title: 'University Panel', time: "12.00pm - 1.00pm", location: "Sapphire"},
+  { title: 'Lunch', time: "1.00pm - 2.00pm"},
+  { title: 'Opening Ceremony', time: "3.00pm - 4.00pm", location: "Sapphire"},
+  { title: 'GA and Crisis Training', time: "4.00pm - 4.30pm", location: "Sapphire"},
+  { title: 'Tea Break', time: "4.30pm - 5.00pm"},
+  { title: 'Committee Session I', time: "5.00pm - 7.30pm", location: "All Conference Rooms"},
+  { title: 'Dinner', time: "8.00pm - 9.00pm"},
+  { title: 'Socials', time: "9.00pm - 11.00pm", location: "Sapphire"}
   ];
 
   $scope.secs = [

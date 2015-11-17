@@ -18,12 +18,15 @@
     "org.apache.cordova.console",
     "org.apache.cordova.device",
     "com.ionic.keyboard",
+    "com.phonegap.plugins.barcodescanner",
     "cordova-plugin-whitelist",
     "org.apache.cordova.splashscreen",
     "https://github.com/EddyVerbruggen/Calendar-Phonegap-Plugin.git",
-    "pushwoosh-cordova-plugin",
     "phonegap-plugin-push",
-    "cordova-plugin-contacts"
+    "cordova-plugin-contacts",
+    "cordova-plugin-file",
+    "cordova-plugin-file-transfer",
+    "org.apache.cordova.inappbrowser"
   ],
   "cordovaPlatforms": [
     "android"
