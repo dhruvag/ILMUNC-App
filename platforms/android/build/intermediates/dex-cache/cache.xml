@@ -44,6 +44,13 @@
         <dex dex="C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-440aa585b84c26e4d47bda2f9ea233ef4a1a43cf.jar" />
     </item>
     <item
+        jar="C:\Users\Dhruv\conference\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\release\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1d03e75b018bb9ef76e9777db6c882e73cfbfd5b">
+        <dex dex="C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\release\classes-e69d81cdc85b19c98f993c7056319ab13f6cadb1.jar" />
+    </item>
+    <item
         jar="C:\Users\Dhruv\conference\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.3.0\classes.jar"
         jumboMode="false"
         revision="23.0.1"
