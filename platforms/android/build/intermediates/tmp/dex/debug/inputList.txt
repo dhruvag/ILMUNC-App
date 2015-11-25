@@ -1,3 +1,12 @@
 C:\Users\Dhruv\conference\platforms\android\build\intermediates\classes\debug
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-d196cdb84d59aede5872a2c6850e199af71b10ba.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-dc3cec4e4896a63b7585dd1fa36fceff9714ea9c.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-18f099b8b04420ab5384ed4ee24f3114d7e41b80.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-b5937064b3168cdf59eca3e2e36db840e86cf582.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-7c0977f0f4f314a19d73385d5e9cf846617e5922.jar
 C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-6f5724a43218541987c5f1786698c18358f2a3d7.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-afd4ac22500988d7face4f51094b932413f9cfa3.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-8de5d33b1f15bf76eb2a87592f72ff299192f788.jar
 C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\com.google.zxing.client.android.captureactivity-d2ab9aa1cefc8d014de248e6f6a17cb7d96421de.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-440aa585b84c26e4d47bda2f9ea233ef4a1a43cf.jar
+C:\Users\Dhruv\conference\platforms\android\build\intermediates\pre-dexed\debug\classes-e5a4594e7f10cfd58481f1ef3bcdb19bfe04482b.jar

@@ -6,7 +6,7 @@
             </div>
             <div class="item item-body">
                 <img style = "float: left; padding-right: 15px;" ng-src="{{groups[2].items[0].chairPic}}">
-                <b style="font-size: 18px;">{{groups[2].items[0].chair}}</b>
+                <b style="text-align: center; margin-top: 35px; font-size: 18px;">{{groups[2].items[0].chair}}</b>
             </div>
             <div class="item tabs tabs-secondary tabs-icon-left">
                 <a ng-href ="mailto: {{groups[2].items[0].email}}" class="tab-item">
@@ -27,13 +27,13 @@
                     <i class="icon ion-location"></i>
                     {{groups[2].items[0].location}}
                 </a>
-                 <a onclick="window.open(encodeURI('{{groups[2].items[0].bg}}'), '_blank', 'location=no');" class="tab-item">
+                 <a target="_blank" href="{{groups[2].items[0].bg}}" class="tab-item">
                     <i class="icon ion-ios-book"></i>
-                    Background Guide
+                    View Background Guide
                 </a>
-                <a onclick="window.open(encodeURI('{{groups[2].items[0].dbg}}'), '_blank', 'location=no');" class="tab-item">
+                <a target="_blank" href="{{groups[2].items[0].dbg}}" class="tab-item">
                     <i class="icon ion-ios-book"></i>
-                    Dynamic Background Guide
+                    View Dynamic Background Guide
                 </a>
             </div>
         </div>

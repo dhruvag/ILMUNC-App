@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['starter.services'])
 
-.controller('AppCtrl', function($scope, $rootScope, $ionicUser, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // Form data for the login modal
   $scope.loginData = {};

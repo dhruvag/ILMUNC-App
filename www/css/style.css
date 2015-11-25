@@ -106,3 +106,8 @@
 .home {
   background-size: 100%;
 }
+
+.tier3 img {
+    padding-left: 15px;
+    padding-bottom: 8px
+}

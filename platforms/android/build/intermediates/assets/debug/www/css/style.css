@@ -100,9 +100,14 @@
 }
 
 .background, .background .pane{
-    background-color: #D1D1D1;
+    background-color: #0c132f ;
 }
 
 .home {
   background-size: 100%;
+}
+
+.tier3 img {
+    padding-left: 15px;
+    padding-bottom: 8px
 }

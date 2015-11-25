@@ -27,11 +27,11 @@
                     <i class="icon ion-location"></i>
                     {{groups[1].items[0].location}}
                 </a>
-                 <a onclick="window.open(encodeURI('{{groups[1].items[0].bg}}'), '_blank', 'location=no');" class="tab-item">
+                <a target="_blank" href="{{groups[1].items[0].bg}}" class="tab-item">
                     <i class="icon ion-ios-book"></i>
                     View Background Guide
                 </a>
-                <a onclick="window.open(encodeURI('{{groups[1].items[0].dbg}}'), '_blank', 'location=no');" class="tab-item">
+                <a target="_blank" href="{{groups[1].items[0].dbg}}" class="tab-item">
                     <i class="icon ion-ios-book"></i>
                     View Dynamic Background Guide
                 </a>

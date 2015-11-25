@@ -26,11 +26,11 @@
 
         <div class="list card" ng-repeat="task in tasks">
       <div class="item item-divider"><b>{{task.title}}</b></div>
-      <div class="item item-body">
+      <!-- <div class="item item-body">
         <div>
           {{task.description}}
         </div>
-      </div>
+      </div> -->
       <div class="item tabs tabs-secondary tabs-icon-left">
                 <a class="tab-item">
                     <i class="icon ion-clock"></i>
@@ -39,11 +39,11 @@
                 <a ng-href = "#/app/map" class="tab-item">
                     <i class="icon ion-map"></i>
                     {{task.location}}
-                </a>
+                </a><!-- 
                  <a ng-click = "createEvent()" class="tab-item">
                     <i class="icon ion-calendar"></i>
                     Add to Calendar
-                </a>
+                </a> -->
             </div>
     </div>
 
